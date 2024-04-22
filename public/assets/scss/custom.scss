@@ -1,0 +1,22 @@
+.text-transition {
+  width: 100% !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.inline {
+  .text-transition {
+    width: fit-content !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+.navbar-nav > li .current {
+  color: #dc965a !important;
+}
+.portfolio-tab {
+  border-bottom: 1px solid none;
+
+  &.active {
+    border-bottom: 1px solid #dc965a;
+  }
+}

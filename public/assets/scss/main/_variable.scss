@@ -1,0 +1,22 @@
+$px-theme: #dc965a !default;
+$px-dark: #1c1d24 !default;
+
+$px-white: #fff !default;
+$px-black: #131416 !default;
+
+$px-gray: #fff5ec !default;
+
+$px-body: #5e6472 !default;
+$px-font-size: 16px !default;
+$px-line-height: 1.7 !default;
+$px-font: var(--font-nunito);
+$px-font-alt: var(--font-nunito);
+
+$px-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px !default;
+$px-shadow-sm: 0 0 30px rgba(0, 0, 0, 0.1%) !default;
+
+// Breakpoints
+$px-media-xsm: 567px !default;
+$px-media-sm: 767px !default;
+$px-media-md: 991px !default;
+$px-media-lg: 1200px !default;
