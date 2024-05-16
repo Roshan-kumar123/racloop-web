@@ -2,7 +2,7 @@ import Header from "@/components/header/Header";
 import Slider from "@/components/slider/SliderFiveVideoDark";
 import About from "@/components/about/AboutSix";
 import Service from "@/components/service/Service";
-import Skills from "@/components/skills/Skills";
+import Skills from "@/components/TechnologySection/TechnologySection";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Blog from "@/components/blog/Blog";
