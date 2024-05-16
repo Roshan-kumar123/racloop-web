@@ -9,6 +9,7 @@ import Blog from "@/components/blog/Blog";
 import Contact from "@/components/contact/Contact";
 import Footer from "@/components/footer/Footer";
 
+import NewTab from "@/components/tab/newTab";
 export const metadata = {
   title: "Home Light || React Personal Portfolio Template",
 };
@@ -20,6 +21,11 @@ const HomeOne = () => {
       <Slider />
       {/* End Banner Section */}
 
+      
+      {/* <VerticalTab data={resumeData.jobs } /> */}
+
+      {/* <ReactTab /> */}
+      <NewTab />
       {/* About Me */}
       <section
         id="about"
