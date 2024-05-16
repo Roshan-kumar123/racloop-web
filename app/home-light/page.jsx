@@ -2,7 +2,8 @@ import Header from "@/components/header/Header";
 import Slider from "@/components/slider/Slider";
 import About from "@/components/about/About";
 import Service from "@/components/service/Service";
-import Skills from "@/components/skills/Skills";
+// import Skills from "@/components/skills/Skills";
+import TechnologySection from "@/components/TechnologySection/TechnologySection";
 import Portfolio from "@/components/portfolio/Portfolio";
 import Testimonial from "@/components/testimonial/Testimonial";
 import Blog from "@/components/blog/Blog";
@@ -62,7 +63,7 @@ const HomeOne = () => {
       {/*  Skills */}
       <section className="section skill-section">
         <div className="container">
-          <Skills />
+          <TechnologySection />
         </div>
       </section>
       {/* End Skills */}
