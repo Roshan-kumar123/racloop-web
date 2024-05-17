@@ -1,5 +1,44 @@
 import React, { useState } from "react";
-import { PiBlueprint } from "react-icons/pi";
+// import { PiBlueprint } from "react-icons/pi";
+import {
+  FaPaintBrush,
+  FaProductHunt,
+  FaVial,
+  // FaCloud,
+  FaSearch,
+  FaWarehouse,
+  FaCogs,
+  FaUsers,
+  FaRedo,
+  // FaSearch,
+  FaTools,
+  FaRocket,
+  FaCloud,
+  FaCode,
+  FaLock,
+  FaSalesforce,
+  FaShieldAlt,
+  FaShoppingCart,
+  FaRobot,
+  FaLink,
+  FaBusinessTime,
+} from "react-icons/fa";
+import {
+  AiOutlineFileText,
+  AiOutlineBulb,
+  AiOutlineRobot,
+  AiFillExperiment,
+  AiFillPieChart,
+} from "react-icons/ai"; // For Consultation and Innovation as a Service
+
+import {
+  IoMdGlobe,
+  IoIosGitBranch,
+  IoMdPhonePortrait,
+  IoLogoGameControllerB,
+  IoIosCube,
+} from "react-icons/io";
+
 import "./newTab.css"; // Create this CSS file to style the tabs
 
 const tabs = [
@@ -12,31 +51,32 @@ const tabs = [
         </h2>
         <div className="tab_content_div">
           <div className="tab_content_card">
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaPaintBrush className="tab_icon" />
               <p>UX/UI Design</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaProductHunt className="tab_icon" />
               <p>Product Development</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaVial className="tab_icon" />
               <p>Test Automation</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaCloud className="tab_icon" />
               <p>
                 Deployment, DevOps &
                 <br />
                 Integrations
               </p>
             </div>
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+
+            <div className="solution-box">
+              <FaSearch className="tab_icon" />
               <p>
                 Product Discovery/
                 <br />
@@ -44,23 +84,23 @@ const tabs = [
               </p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaWarehouse className="tab_icon" />
               <p>Product Sustenance</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaCogs className="tab_icon" />
               <p>Infrastructure Automation</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaUsers className="tab_icon" />
               <p>Smart Teams</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaRedo className="tab_icon" />
               <p>Modernization</p>
             </div>
           </div>
@@ -82,27 +122,28 @@ const tabs = [
         </h2>
         <div className="tab_content_div">
           <div className="tab_content_card">
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <AiOutlineFileText className="tab_icon" />
               <p>Consultation</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaSearch className="tab_icon" />
               <p>Discovery</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <AiOutlineBulb className="tab_icon" />
               <p>Innovation as a Service</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaTools className="tab_icon" />
               <p>Prototype & POC</p>
             </div>
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+
+            <div className="solution-box">
+              <FaRocket className="tab_icon" />
               <p>MVP</p>
             </div>
           </div>
@@ -124,61 +165,61 @@ const tabs = [
         </h2>
         <div className="tab_content_div">
           <div className="tab_content_card">
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
-              <p>CArtificial Intelligence</p>
+            <div className="solution-box">
+              <AiOutlineRobot className="tab_icon" />
+              <p>Artificial Intelligence</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <AiFillExperiment className="tab_icon" />
               <p>Machine Learning</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <IoMdGlobe className="tab_icon" />
               <p>AR/VR</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <IoIosGitBranch className="tab_icon" />
               <p>IoT</p>
             </div>
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+
+            <div className="solution-box">
+              <FaRobot className="tab_icon" />
               <p>RPA</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <IoMdPhonePortrait className="tab_icon" />
               <p>Wearables</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <IoLogoGameControllerB className="tab_icon" />
               <p>Metaverse</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaLink className="tab_icon" />
               <p>Blockchain</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <AiFillPieChart className="tab_icon" />
               <p>Analytics</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaBusinessTime className="tab_icon" />
               <p>Business Intelligence</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <IoIosCube className="tab_icon" />
               <p>Data Warehousing</p>
             </div>
           </div>
-
           <div className="tab_img">
             <img src="https://cdn.mobisoftinfotech.com/assets/images/newhome/services/webp/Service-3.webp" />
           </div>
@@ -195,32 +236,33 @@ const tabs = [
         </h2>
         <div className="tab_content_div">
           <div className="tab_content_card">
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaLock className="tab_icon" />
               <p>Dev Secure Ops</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaCode className="tab_icon" />
               <p>Technology & Architecture</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaCloud className="tab_icon" />
               <p>Cloud</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaShieldAlt className="tab_icon" />
               <p>Cybersecurity</p>
             </div>
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+
+            <div className="solution-box">
+              <FaSalesforce className="tab_icon" />
               <p>Salesforce</p>
             </div>
 
-            <div class="solution-box">
-              <PiBlueprint className="tab_icon" />
+            <div className="solution-box">
+              <FaShoppingCart className="tab_icon" />
               <p>Digital Commerce</p>
             </div>
           </div>

@@ -6,7 +6,7 @@ import VerticalNewTabs from "./verticalNewTab";
 
 const newTab = () => {
   return (
-    <div className="newTab">
+    <div className="newTab container-fluid">
       <VerticalNewTabs />
     </div>
   );
