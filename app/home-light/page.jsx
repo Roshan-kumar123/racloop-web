@@ -23,7 +23,28 @@ const HomeOne = () => {
       {/* End Banner Section */}
 
       
-      {/* <VerticalTab data={resumeData.jobs } /> */}
+        {/* Services */}
+      <section
+        id="services"
+        className="section services-section gray-bg scrollSpysection"
+      >
+        <div className="container">
+          <div className="row justify-content-center section-title text-center">
+            <div className="col-lg-7">
+              <h3 className="font-alt">Our Services</h3>
+              <p>
+                I design and develop services for customers of all sizes,
+                specializing in creating stylish, modern websites, web services
+                and online stores.
+              </p>
+            </div>
+          </div>
+          {/* End .row */}
+          <Service />
+        </div>
+      </section>
+      {/* End Services */}
+
 
       {/* <ReactTab /> */}
       <NewTab />
@@ -38,28 +59,7 @@ const HomeOne = () => {
       </section>
       {/* End About Me */}
 
-      {/* Services */}
-      <section
-        id="services"
-        className="section services-section gray-bg scrollSpysection"
-      >
-        <div className="container">
-          <div className="row justify-content-center section-title text-center">
-            <div className="col-lg-7">
-              <h3 className="font-alt">My Services</h3>
-              <p>
-                I design and develop services for customers of all sizes,
-                specializing in creating stylish, modern websites, web services
-                and online stores.
-              </p>
-            </div>
-          </div>
-          {/* End .row */}
-          <Service />
-        </div>
-      </section>
-      {/* End Services */}
-
+  
       {/*  Skills */}
       <section className="section skill-section">
         <div className="container">
@@ -68,7 +68,7 @@ const HomeOne = () => {
       </section>
       {/* End Skills */}
 
-      <section id="work" className="section gray-bg scrollSpysection">
+      {/* <section id="work" className="section gray-bg scrollSpysection">
         <div className="container">
           <div className="row justify-content-center section-title text-center">
             <div className="col-lg-7">
@@ -80,18 +80,11 @@ const HomeOne = () => {
               </p>
             </div>
           </div>
-          {/* End .row */}
+        
           <Portfolio />
         </div>
-      </section>
-      {/* End Portfolio */}
-
-      <div className="section testimonial">
-        <div className="container">
-          <Testimonial />
-        </div>
-      </div>
-      {/* End testimonial */}
+      </section> */}
+   
 
       {/* Blog */}
       <section id="blog" className="section gray-bg scrollSpysection">
@@ -111,6 +104,22 @@ const HomeOne = () => {
         </div>
       </section>
       {/*  End Blog */}
+
+
+         {/* End Portfolio */}
+
+      <div className="section testimonial">
+        <div className="container">
+           <div className="row justify-content-center section-title text-center">
+            <div className="col-lg-7">
+              <h3 className="font-alt">Our Founder's</h3>
+            
+            </div>
+          </div>
+          <Testimonial />
+        </div>
+      </div>
+      {/* End testimonial */}
 
       {/* Contact */}
       <section
