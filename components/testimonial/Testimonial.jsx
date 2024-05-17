@@ -23,43 +23,48 @@ export default function SimpleSlider() {
   };
 
   const TestimonilContent = [
-    {
-      imageName: "team-1",
+   {
+      imageName: "pankaj.jpeg",
       desc: `  I design and develop services for customers of all sizes,
       specializing in creating stylish, modern websites, web services
       and online stores.`,
-      reviewerName: "Nancy Byers",
+      reviewerName: "Pankaj",
       rating: "5.0",
     },
-    {
-      imageName: "team-2",
+     {
+      imageName: "mona.jpeg",
       desc: `  I design and develop services for customers of all sizes,
       specializing in creating stylish, modern websites, web services
       and online stores.`,
-      reviewerName: "Jara Afsari",
+      reviewerName: "Mona",
+      rating: "5.0",
+    },
+   
+    {
+      imageName: "rajan.jpeg",
+      desc: `  I design and develop services for customers of all sizes,
+      specializing in creating stylish, modern websites, web services
+      and online stores.`,
+      reviewerName: "Rajan",
       rating: "4.8",
     },
-    {
-      imageName: "team-4",
-      desc: `  I design and develop services for customers of all sizes,
-      specializing in creating stylish, modern websites, web services
-      and online stores.`,
-      reviewerName: "Janiaya kiaram",
-      rating: "5.0",
-    },
+    
+   
   ];
 
   return (
     <>
       <Slider {...settings}>
         {TestimonilContent.map((val, i) => (
+        
           <div className="testmonial-box media" key={i}>
+              {console.log('val',val)}
             <div className="avatar">
               <Image
                 width={638}
                 height={690}
                 style={{ height: "fit-content" }}
-                src={`/img/testimonial/${val.imageName}.jpg`}
+                src={`/img/${val.imageName}`}
                 alt="review comments"
               />
             </div>

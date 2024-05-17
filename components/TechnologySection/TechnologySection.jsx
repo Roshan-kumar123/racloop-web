@@ -137,15 +137,15 @@ const TechnologySection = () => {
     <section className="mshome-sec client-sec even rel" id="technology-sec">
       <div className="container-fluid">
         <div className="sec-head client">
-          <h2 className="mshome-heading">
+          <h2 className=" font-alt heading" style={{width:'85%',marginLeft:'0px'}}> 
             Constant Innovation with Technology Competence
           </h2>
-          <p className="sub-heading">
+          <h2 className="mb-5">
             Dedicated center of excellence for each focus area.
-          </p>
+          </h2>
         </div>
         <div className="row">
-          <div className="col-md-9 col-sm-12">
+          <div className="col-md-12 col-sm-12">
             <div className="row">
               <div className="col-md-6 col-sm-6">
                 <div className="inno-div">
@@ -251,7 +251,7 @@ const TechnologySection = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-3 col-sm-12">
+          {/* <div className="col-md-3 col-sm-12">
             <div className="innovation">
               <h3>EMERGING</h3>
               <p>
@@ -277,7 +277,7 @@ const TechnologySection = () => {
                 </a>
               </p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

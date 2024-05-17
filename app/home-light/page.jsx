@@ -47,6 +47,7 @@ const HomeOne = () => {
 
 
       {/* <ReactTab /> */}
+      <section cal></section>
       <NewTab />
       {/* About Me */}
       <section
@@ -87,7 +88,7 @@ const HomeOne = () => {
    
 
       {/* Blog */}
-      <section id="blog" className="section gray-bg scrollSpysection">
+      {/* <section id="blog" className="section gray-bg scrollSpysection">
         <div className="container">
           <div className="row justify-content-center section-title text-center">
             <div className="col-lg-7">
@@ -99,16 +100,16 @@ const HomeOne = () => {
               </p>
             </div>
           </div>
-          {/* End .row */}
+          End .row
           <Blog />
         </div>
-      </section>
+      </section> */}
       {/*  End Blog */}
 
 
          {/* End Portfolio */}
 
-      <div className="section testimonial">
+      <div className="section testimonial gray-bg">
         <div className="container">
            <div className="row justify-content-center section-title text-center">
             <div className="col-lg-7">
