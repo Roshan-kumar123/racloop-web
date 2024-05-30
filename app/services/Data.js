@@ -1,8 +1,8 @@
-import { FaLightbulb } from "react-icons/fa6";
+import { FaGear, FaLightbulb } from "react-icons/fa6";
 import { RiEmpathizeFill } from "react-icons/ri";
 import { FaDatabase } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
-import { GrTechnology } from "react-icons/gr";
+import { GrOptimize, GrTechnology } from "react-icons/gr";
 import { LuBrainCircuit } from "react-icons/lu";
 import { FaMobile } from "react-icons/fa6";
 import { MdOutlineWeb } from "react-icons/md";
@@ -12,6 +12,24 @@ import { FcAutomatic } from "react-icons/fc";
 import { GiFastArrow } from "react-icons/gi";
 import { GiDeliveryDrone } from "react-icons/gi";
 import { MdOutlineSecurity } from "react-icons/md";
+import { GrTestDesktop } from "react-icons/gr";
+import { MdFrontLoader } from "react-icons/md";
+import { FaAws } from "react-icons/fa";
+import { GrSecure } from "react-icons/gr";
+import { GiBorderedShield } from "react-icons/gi";
+import { FaFunnelDollar } from "react-icons/fa";
+import { FaUserClock } from "react-icons/fa";
+import { FaArrowUpRightDots } from "react-icons/fa6";
+import { FaHandHoldingDollar } from "react-icons/fa6";
+import {
+  SiReact,
+  SiXcode,
+  SiAndroidstudio,
+  SiXamarin,
+  SiFlutter,
+  SiIonic,
+} from "react-icons/si";
+
 const data = [
   {
     "ui-ux-design": [
@@ -310,6 +328,7 @@ const data = [
               "Automated processes minimize the chance of human error, leading to more reliable deployments.",
           },
         ],
+        image: "/img/ourServices/deployment-automation.jpg",
       },
 
       {
@@ -347,26 +366,288 @@ const data = [
             title: "Automated Testing",
             content:
               "Automate repetitive testing tasks to streamline your testing process and ensure consistent quality.",
+            icon: (
+              <GrTestDesktop
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
           },
           {
             title: "Load Testing",
             content:
               "Simulate real-world user traffic to identify potential bottlenecks and ensure your application can handle peak loads.",
+            icon: (
+              <MdFrontLoader
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
           },
           {
             title: "Secure AWS Environments",
             content:
               "We configure robust access controls within your AWS infrastructure to restrict unauthorized access and protect sensitive data.",
+            icon: (
+              <FaAws style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
           },
           {
             title: "Security, Identity, and Compliance",
             content:
               "Our experts ensure your cloud environment adheres to industry security standards and compliance regulations.",
+            icon: (
+              <GiBorderedShield
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
           },
           {
             title: "Managed Access Control Logs",
             content:
               "We help you establish centralized management of access control logs for improved visibility and auditability within AWS.",
+            icon: (
+              <GrSecure
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+        ],
+      },
+    ],
+    "product-sustenance": [
+      {
+        title: "Product Sustenance",
+        content: "Evolve and Thrive",
+      },
+      {
+        title: "From Launch to Legend",
+        content:
+          "In today's dynamic digital landscape, a successful product launch is just the beginning. To ensure long-term success, your SaaS solution needs ongoing maintenance, improvement, and adaptation. That's where our product sustenance services come in. We go beyond basic maintenance, offering a comprehensive approach that keeps your product relevant, ahead of the curve, and sustainable. Our team doesn't just monitor and maintain – we actively work to upgrade, optimize, and enhance your product, driving tangible business growth and performance.",
+      },
+      {
+        title: "Here's how we help you achieve long-term product success:",
+        content: [
+          {
+            title: "Proactive Maintenance & Security",
+            content:
+              "We prioritize ongoing bug fixes, security patching, and performance optimization to ensure your product remains reliable and secure.",
+            icon: (
+              <GrSecure
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Continuous Innovation",
+            content:
+              "Our team works collaboratively with you to identify new features and functionalities that address evolving user needs and market trends.",
+            icon: (
+              <FaLightbulb
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Scalability & Performance",
+            content:
+              "As your user base grows, we ensure your product infrastructure can seamlessly adapt. We proactively address scalability concerns and optimize performance to maintain a smooth user experience.",
+            icon: (
+              <FaGear style={{ fontSize: "60px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Modernization & Optimization",
+            content:
+              "Our services extend beyond classic maintenance. We leverage the latest technologies and trends to modernize your product, enhancing user experience and functionality.",
+            icon: (
+              <GrOptimize
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Data-Driven User Focus",
+            content:
+              "We actively gather and analyze user feedback to identify areas for improvement and prioritize new features based on user needs.",
+            icon: (
+              <FaDatabase
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Efficient Delivery",
+            content:
+              "We leverage CI/CD practices to deliver updates and enhancements efficiently, minimizing disruption to your users.",
+            icon: (
+              <GiDeliveryDrone
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+        ],
+      },
+      {
+        title: "App Monitoring Services",
+        subheading:
+          "Application monitoring for evaluating the end-user experience and component-level performance of the mobile application.",
+        content: [
+          "Server monitoring",
+          "App crash monitoring",
+          "Analytics monitoring",
+          "App feedback monitoring",
+          "Security reviews",
+          "Third party integration update reviews",
+          "Performance monitoring",
+          "App store management & monitoring",
+          "Hosting & third party payment monitoring",
+          "Source code repository & versioning",
+        ],
+        image: "/img/ourServices/appMonitor.jpg",
+      },
+      {
+        title: "App Upgrade Services",
+        subheading:
+          "We provide smart ways of maintaining the user interface and upgrading it to new OS advances user functionality outperforms the application efficiency.",
+        content: [
+          "Mobile app performance optimization",
+          "Refactoring deprecated code ( If required )",
+          "Correct errors",
+          "Improve the app interfaces and interactions",
+          "Upgrade to support upcoming OS and devices",
+          "Perfecting existing acceptable functions",
+          "Operational level support",
+          "Major upgrades and additions",
+          "Support new library versions",
+          "Data model migrations between update",
+        ],
+        image: "/img/ourServices/appUpgrade.jpg",
+      },
+      {
+        title: "Mobile App Maintenance and Enhancement Services",
+        subheading:
+          "We provide smart ways of maintaining the user interface and upgrading it to new OS advances user functionality outperforms the application efficiency.",
+        content: [
+          "Feature extension",
+          "Migration script and backend server modification",
+          "Release plan and management",
+          "Performance enhancement",
+          "Minor, incremental and major enhancements",
+          "Usability enhancement",
+          "Security enhancement",
+          "Continuous testing",
+          "App porting",
+        ],
+        image: "/img/ourServices/appMaintain.jpg",
+      },
+      {
+        title: "App Support, Maintenance & Optimization Services",
+        subheading:
+          "From productivity enhancement, feature enrichment, to regular functionality updates, our mobile app maintenance & support services help you make your app convenient to use.",
+        content: [
+          "Responding to customer queries",
+          "Deploying the apps to app stores/enterprise stores",
+          "Providing enterprise training programs",
+          "Integrating to complex corporate systems",
+        ],
+        image: "/img/ourServices/appSupport.jpg",
+      },
+      {
+        title: "Technology Tools and Services",
+        subheading:
+          "We have expertise in various cutting edge technologies and software tools to elevate your mobile app maintenance process.",
+        content: [
+          {
+            title: "Xcode",
+            content: "",
+            icon: (
+              <SiXcode style={{ fontSize: "60px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Android Studio",
+            content: "",
+            icon: (
+              <SiAndroidstudio
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "React Native",
+            content: "",
+            icon: (
+              <SiReact style={{ fontSize: "60px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Flutter",
+            content: "",
+            icon: (
+              <SiFlutter
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Ionic Framework",
+            content: "",
+            icon: (
+              <SiIonic style={{ fontSize: "60px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Xamarin",
+            content: "",
+            icon: (
+              <SiXamarin
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+        ],
+      },
+      {
+        title: "Benefits of Our Product Sustenance Approach:",
+        content: [
+          {
+            title: "Reduced Costs",
+            content:
+              "By proactively addressing potential issues, you can avoid costly downtime and rework.",
+            icon: (
+              <FaFunnelDollar
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Enhanced User Retention",
+            content:
+              "A product that keeps pace with user needs and expectations fosters user satisfaction and loyalty.",
+            icon: (
+              <FaUserClock
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Competitive Advantage",
+            content:
+              "Continuous innovation allows you to stay ahead of the curve and maintain a competitive edge.",
+            icon: (
+              <FaArrowUpRightDots
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Maximized ROI",
+            content:
+              "By ensuring your product's long-term viability, you maximize the value you get from your initial investment.",
+            icon: (
+              <FaHandHoldingDollar
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
           },
         ],
       },

@@ -11,7 +11,7 @@ export default function CodeBlock({ data }) {
       <div className="flex flex-row justify-center items-center flex-wrap">
         <code
           dangerouslySetInnerHTML={{ __html: data.content }}
-          className="bg-black color-white p-3 md:p-10 w-full h-auto w-[600px] border-2 border-black rounded-3xl mt-5 text-sm"
+          className="bg-black color-white p-3 md:p-10 h-auto md:w-[600px] border-2 border-black rounded-3xl lg:mt-5 lg:mr-5 text-sm w-[400px] overflow-auto"
         />
         <img
           src={data.output}

@@ -6,7 +6,7 @@ export default function Defination({ data }) {
           {data.title}
         </h1>
         {data.content && (
-          <p className="mb-6 text-lg font-normal text-gray-900 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+          <p className="mb-6 text-lg font-normal text-black lg:text-2xl sm:px-16 xl:px-48 text-center">
             {data.content}
           </p>
         )}

@@ -1,7 +1,7 @@
 export default function Cards1({ data }) {
   return (
     <section class="p-6 dark:bg-gray-100 dark:text-gray-800">
-      <div class="container mx-auto p-10">
+      <div class="container mx-auto mt-10">
         <h2 class="text-5xl font-bold text-center dark:text-gray-900">
           {data.title}
         </h2>

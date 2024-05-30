@@ -10,8 +10,12 @@ function ServiceTitle({ data }) {
           backgroundPosition: "center",
         }}
       >
-        <div className="text-7xl center">{data.title}</div>
-        <div className="text-3xl mt-10 text-center">{data.content}</div>
+        <div className="text-5xl md:text-7xl center text-center">
+          {data.title}
+        </div>
+        <div className="text-2xl md:text-3xl mt-10 text-center">
+          {data.content}
+        </div>
       </div>
     </>
   );
