@@ -1,5 +1,4 @@
 import LinkCard from "./LinkCard";
-
 export default function LinkBlock({ data }) {
   return (
     <>

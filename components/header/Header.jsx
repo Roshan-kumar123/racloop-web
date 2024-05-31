@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
 import addScrollspy from "@/utlis/addScrollSpy";
@@ -106,13 +105,13 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="nav-link"
                     href="/about-us"
                     onClick={handleClick}
                   >
                     <span>About Us</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
                   <a
@@ -134,22 +133,22 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="nav-link"
                     href="/contact-us"
                     onClick={handleClick}
                   >
                     <span>Contact</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="nav-link"
                     href="/machine-learning"
                     onClick={handleClick}
                   >
                     <span>Learn ML</span>
-                  </a>
+                  </Link>
                 </li>
               </ul>
               <button

@@ -4,9 +4,11 @@ import data from "../../data/about-us";
 import ImageDesc3 from "@/components/about/ImageDesc3";
 import AboutData from "@/components/about/AboutData";
 import ColumnInfo2 from "@/components/about/ColumnInfo2";
+import Header from "@/components/header/Header";
 export default function AboutUs() {
   return (
     <>
+      <Header />
       <ServiceTitle data={data[0]} />
       <AboutData data={data[1]} />
       <ImageDesc3 data={data[3]} />
