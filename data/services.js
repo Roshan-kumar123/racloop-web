@@ -1,9 +1,9 @@
-import { FaGear, FaLightbulb } from "react-icons/fa6";
+import { FaC, FaGear, FaLightbulb } from "react-icons/fa6";
 import { RiEmpathizeFill } from "react-icons/ri";
-import { FaDatabase } from "react-icons/fa";
+import { FaCloud, FaDatabase } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
 import { GrOptimize, GrTechnology } from "react-icons/gr";
-import { LuBrainCircuit } from "react-icons/lu";
+import { LuBrainCircuit, LuContainer } from "react-icons/lu";
 import { FaMobile } from "react-icons/fa6";
 import { MdOutlineWeb } from "react-icons/md";
 import { BsSmartwatch } from "react-icons/bs";
@@ -349,16 +349,27 @@ const data = [
             title: "Cloud Orchestration & Automation",
             content:
               "Streamline cloud infrastructure management and deployments for increased efficiency and cost savings.",
+            icon: (
+              <FaCloud style={{ fontSize: "60px", color: "rgb(225,150,83)" }} />
+            ),
           },
           {
             title: "Containerization Strategy & Architecture",
             content:
               "Deploy containerized applications for portability, scalability, and faster development cycles.",
+            icon: (
+              <LuContainer
+                style={{ fontSize: "60px", color: "rgb(225,150,83)" }}
+              />
+            ),
           },
           {
             title: "Multi-zone and Multi-region AWS Deployments",
             content:
               "Ensure high availability and disaster recovery with geographically distributed deployments on Amazon Web Services.",
+            icon: (
+              <FaAws style={{ fontSize: "60px", color: "rgb(225,150,83)" }} />
+            ),
           },
         ],
       },

@@ -1,7 +1,10 @@
-import { FaNetworkWired, FaUser } from "react-icons/fa";
+import { FaNetworkWired, FaSearch, FaUser } from "react-icons/fa";
 import { TbCurrencyDollarOff, TbTargetArrow } from "react-icons/tb";
-import { PiPersonArmsSpreadFill } from "react-icons/pi";
+import { PiListMagnifyingGlass, PiPersonArmsSpreadFill } from "react-icons/pi";
 import { GrPerformance } from "react-icons/gr";
+import { MdCreditScore, MdGroups } from "react-icons/md";
+import { IoIosCash } from "react-icons/io";
+import { GiHealthNormal } from "react-icons/gi";
 
 const Data = [
   {
@@ -757,13 +760,215 @@ const Data = [
         title: "What is Logistic Regression?",
         content:
           "Logistic regression is a type of regression analysis used to predict the outcome of a categorical dependent variable based on one or more predictor variables. It's used when the dependent variable is binary (e.g., yes/no, 0/1, true/false) and the independent variables can be continuous or categorical. Logistic regression models the probability that the dependent variable belongs to a particular category. It's widely used in various fields like healthcare, marketing, finance, and social sciences for tasks like predicting customer churn, classifying spam emails, and diagnosing diseases.",
+        image: "/img/ml/log1.webp",
       },
       {
         title:
           "Why do we use Logistic Regression rather than Linear Regression?",
         content:
           "Linear regression and logistic regression are both workhorses in machine learning, but they tackle different tasks.  While linear regression predicts continuous values (like house prices), logistic regression is designed for binary outcomes (yes/no or pass/fail).  Imagine predicting customer churn - did they churn or not? Logistic regression is ideal here, providing a probability of churn,  whereas linear regression wouldn't be suitable for this classification problem.",
-        image: "/img/ml/lr7.png",
+        image: "/img/ml/log2.png",
+      },
+      {
+        title: "Terms used in Logistic Regression",
+        content: [
+          {
+            title: "Odds Ratio",
+            content:
+              "The odds ratio is a measure of association between an exposure and an outcome. The odds ratio represents the odds that an outcome will occur given a particular exposure, compared to the odds of the outcome occurring in the absence of that exposure.",
+            icon: <img src="/img/ml/odds-ratio.png"></img>,
+          },
+          {
+            title: "Logit Function",
+            content:
+              "The logit function is the natural logarithm of the odds of the dependent variable being 1 (success). It transforms the probability of the dependent variable into a linear relationship with the independent variables.",
+            icon: <img src="/img/ml/logit-function.gif"></img>,
+          },
+          {
+            title: "Sigmoid Function",
+            content:
+              "The sigmoid function, also known as the logistic function, is used to map the logit function's output to a probability value between 0 and 1. It's an S-shaped curve that converts the linear combination of features into a probability score.",
+            icon: <img src="/img/ml/sigmoid-function.png"></img>,
+          },
+          {
+            title: "Confusion Matrix",
+            content:
+              "A confusion matrix is a table that is often used to describe the performance of a classification model on a set of test data for which the true values are known. It allows the visualization of the performance of an algorithm.",
+            icon: <img src="/img/ml/confusion-matrix.png"></img>,
+          },
+        ],
+      },
+      {
+        title: "Cost Function",
+        content: [
+          {
+            title: "What it is",
+            content:
+              "The cost function in logistic regression is a performance metric used to measure the discrepancy between the model's predicted probabilities and the actual labels (0 or 1) for each data point.",
+          },
+          {
+            title: "What it measures",
+            content:
+              "It calculates the average difference between what the model predicted (probability) and what actually happened (0 or 1) across all training examples.",
+          },
+          {
+            title: "The most common cost function",
+            content:
+              "Binary Cross-Entropy Loss (Log Loss): This is the most widely used cost function in logistic regression. ",
+          },
+          {
+            title: "What the common cost function penalizes",
+            content:
+              "It penalizes the model for both underestimating the probability of the positive outcome (class 1) when it actually occurred and overestimating the probability of the positive outcome when it didn't occur.",
+          },
+          {
+            title: "Mathematical Formula",
+            content:
+              "The formula for Binary Cross-Entropy Loss is:      Cost = -(1/m) * Σ[y_true * log(y_pred) + (1 - y_true) * log(1 - y_pred)]",
+          },
+          {
+            title: "Goal",
+            content:
+              "The goal of logistic regression is to minimize this cost function. By minimizing the cost function, the model learns to predict probabilities that better match the actual labels, leading to a better performing classification model.",
+          },
+        ],
+      },
+      {
+        title: "Gradient Descent in Logistic Regression",
+        content: [
+          {
+            title: "Goal",
+            content:
+              "Minimize the cost function. This function measures how well the model's predictions (probabilities) match the actual labels (0 or 1).",
+          },
+          {
+            title: "Gradient Descent as a Guide",
+            content:
+              "Imagine a hilly landscape where the valleys represent lower cost function values (better model fit). Gradient descent acts like a guide, taking the model downhill in the direction of steepest descent (greatest cost function decrease) with each iteration.",
+          },
+          {
+            title: "Small Steps, Big Impact",
+            content:
+              "Gradient descent doesn't jump to the absolute minimum. Instead, it takes small steps in the direction with the most significant cost function decrease. This iterative process ensures it reaches the optimal solution efficiently.",
+          },
+          {
+            title: "Parameter Adjustment",
+            content:
+              "Logistic regression uses weights and bias as parameters to make predictions. Gradient descent helps adjust these parameters in each iteration based on the cost function, leading the model towards better classification accuracy.",
+          },
+          {
+            title: "Visualization",
+            content:
+              "The cost function can be visualized as a 3D landscape. Gradient descent allows us to see the model's path downhill, optimizing its parameters to reach the lowest point (best fit).",
+          },
+        ],
+        image: <img src="/img/ml/log3.png"></img>,
+      },
+      {
+        title: "Assumptions of Logistic Regression",
+        content: [
+          {
+            title: "Binary Dependent Variable",
+            content:
+              "The core assumption is that the dependent variable (what you're trying to predict) must be binary. This means it can only have two categories, typically labeled 0 and 1 (e.g., churned/not churned, passed/failed).",
+          },
+          {
+            title: "Independent Observations",
+            content:
+              "The data points (observations) used to train the model should be independent of each other. This means there shouldn't be any inherent relationship between one data point and another.",
+          },
+          {
+            title: "Linear Relationship",
+            content:
+              "While logistic regression doesn't directly model a linear relationship between the independent variables and the dependent variable, it assumes a linear relationship exists between the log odds of the dependent variable and the independent variables. This allows the model to capture the impact of each variable on the probability of the positive outcome.",
+          },
+          {
+            title: "No Multicollinearity",
+            content:
+              "The independent variables themselves should not be highly correlated with each other. Multicollinearity can make it difficult to isolate the effect of each variable on the outcome.",
+          },
+          {
+            title: "Absence of Outliers",
+            content:
+              "Extreme outliers in the data can significantly influence the model's coefficients and predictions. It's important to identify and potentially address outliers before training the model.",
+          },
+          {
+            title: "Calibration",
+            content:
+              "The predicted probabilities should be well-calibrated, meaning they accurately reflect the true likelihood of the positive outcome. Calibration ensures that the model's predictions are reliable and can be used to make informed decisions.",
+          },
+        ],
+      },
+      {
+        title: "Sample Code",
+        content:
+          "# Import necessary libraries<br/>import numpy as np<br/>import matplotlib.pyplot as plt<br/>import seaborn as sns<br/>from sklearn.datasets import load_diabetes<br/>from sklearn.model_selection import train_test_split<br/>from sklearn.preprocessing import StandardScaler<br/>from sklearn.linear_model import LogisticRegression<br/>from sklearn.metrics import accuracy_score<br/><br/># Load the diabetes dataset<br/>diabetes = load_diabetes()<br/>X, y = diabetes.data, diabetes.target<br/><br/># Convert the target variable to binary (1 for diabetes, 0 for no diabetes)<br/>y_binary = (y > np.median(y)).astype(int)<br/><br/># Split the dataset into training and testing sets<br/>X_train, X_test, y_train, y_test = train_test_split(X, y_binary, test_size=0.2, random_state=42)<br/><br/># Standardize the features<br/>scaler = StandardScaler()<br/>X_train = scaler.fit_transform(X_train)<br/>X_test = scaler.transform(X_test)<br/><br/>#Train the logistic regression model<br/>model = LogisticRegression()<br/>model.fit(X_train, y_train)<br/><br/>#Evaluate the model<br/>y_pred = model.predict(X_test)<br/>accuracy = accuracy_score(y_test, y_pred)<br/>print('Accuracy:', accuracy)<br/><br/><br/># Visualize the decision boundary with accuracy information<br/>plt.figure(figsize=(8, 6))<br/>sns.scatterplot(x=X_test[:, 2], y=X_test[:, 8], hue=y_test, palette={<br/>                0: 'blue', 1: 'red'}, marker='o')<br/>plt.xlabel('BMI')<br/>plt.ylabel('Age')<br/>plt.title('Logistic Regression Decision Boundary\nAccuracy: {:.2f}%'.format(<br/>    accuracy * 100))<br/>plt.legend(title='Diabetes', loc='upper right')<br/>plt.show()",
+        output: "/img/ml/logOutput.png",
+      },
+      {
+        title: "Applications of Logistic Regression",
+        content: [
+          {
+            title: "Credit Risk Assessment",
+            content:
+              "Logistic regression models analyze loan applications, financial history, and other factors to assess the probability of loan default. This helps banks make informed lending decisions.",
+            icon: (
+              <MdCreditScore
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Fraudulent Transaction Detection",
+            content:
+              "By analyzing historical transaction data, features like location, time, and purchase amount, logistic regression models can flag transactions with a high probability of being fraudulent.",
+            icon: (
+              <IoIosCash
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Content Filtering",
+            content:
+              "Logistic regression models can analyze user preferences, past interactions, and content features to recommend relevant content (articles, videos) to users, personalizing their online experience.",
+            icon: (
+              <PiListMagnifyingGlass
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Search Relevance",
+            content:
+              "By analyzing user searches, clicked results, and website content, logistic regression models can rank search results based on their relevance to the user query.",
+            icon: (
+              <FaSearch
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Healthcare Diagnostics",
+            content:
+              "Logistic regression models can analyze patient data like symptoms, test results, and medical history to predict the likelihood of a specific disease or condition.",
+            icon: (
+              <GiHealthNormal
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Market Segmentation",
+            content:
+              "By analyzing customer demographics, purchase history, and behavior, logistic regression models can segment customers into groups based on their likelihood to purchase certain products or services.",
+            icon: (
+              <MdGroups
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+        ],
       },
     ],
   },
