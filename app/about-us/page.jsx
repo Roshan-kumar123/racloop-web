@@ -1,8 +1,8 @@
 import ServiceTitle from "@/components/ourServices/ServiceTitle";
 import "../style/globals.css";
-import data from "./aboutData";
-import AboutData from "@/components/about/aboutData";
+import data from "../../data/about-us";
 import ImageDesc3 from "@/components/about/ImageDesc3";
+import AboutData from "@/components/about/AboutData";
 import ColumnInfo2 from "@/components/about/ColumnInfo2";
 export default function AboutUs() {
   return (

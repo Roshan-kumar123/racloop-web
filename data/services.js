@@ -328,7 +328,12 @@ const data = [
               "Automated processes minimize the chance of human error, leading to more reliable deployments.",
           },
         ],
-        image: "/img/ourServices/deployment-automation.jpg",
+        image: (
+          <img
+            src="/img/ourServices/deployment-automation.jpg"
+            className="md:h-[500px] md:w-[700px] h-auto w-auto"
+          ></img>
+        ),
       },
 
       {

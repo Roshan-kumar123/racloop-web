@@ -67,7 +67,12 @@ const Data = [
           title: "The formula for Normal Distribution",
           content:
             "The method of finding whether data is normally distributed or otherwise is to draw a normal probability distribution plot. Given different values of the random variable, you can calculate the probability using the probability density function below.",
-          image: "",
+          image: (
+            <img
+              src="/img/ml/normalFormula.png"
+              className="md:h-[200px] md:w-[500px] h-auto w-auto"
+            ></img>
+          ),
         },
         {
           title: "Sample Code",
@@ -145,13 +150,13 @@ const Data = [
           title: "The formula for Binomial Distribution",
           content:
             "In general, if the random variable X follows the binomial distribution with parameters n ∈ 𝑁 and p ∈ [0,1], we write X ~ B(n, p). The probability of getting exactly k successes in n independent Bernoulli trials (with the same rate p) is given by the probability mass function:",
-          image: "/img/ml/binomialFormula.png",
+          image: <img src="/img/ml/binomialFormula.png"></img>,
         },
         {
           title: "Bernoulli Distribution",
           content:
             "The Bernoulli distribution is a special case of the binomial distribution where a single trial is conducted (n = 1). It's used to model situations with only two possible outcomes, like a coin flip or a yes/no question. The probability mass function of the Bernoulli distribution is given by:",
-          image: "/img/ml/bernoulliFormula.png",
+          image: <img src="/img/ml/bernoulliFormula.png"></img>,
         },
         {
           title: "Sample Code",
@@ -234,7 +239,12 @@ const Data = [
           title: "The formula for Poisson Distribution",
           content:
             "The Poisson distribution is defined by a single parameter, λ (lambda), which represents the average rate of event occurrences in the interval. The probability mass function of the Poisson distribution is given by:",
-          image: "/img/ml/poissonFormula.jpeg",
+          image: (
+            <img
+              src="/img/ml/poissonFormula.jpeg"
+              className="h-[150px] w-[400px]"
+            ></img>
+          ),
         },
         {
           title: "Sample Code",
@@ -424,10 +434,11 @@ const Data = [
         },
       ],
     },
-    linearRegression: [
+    "machine-learning": [
       {
-        title: "Linear Regression",
-        content: "",
+        title: "Machine Learning",
+        content:
+          "Unleashing the Power of Artificial Intelligence: Exploring the World of Machine Learning",
       },
       {
         title: "What is Machine Learning?",
@@ -453,20 +464,51 @@ const Data = [
         ],
       },
       {
-        title: "Importance of Linear Regression",
+        title: "Unsupervised Machine Learning",
+        content:
+          "Supervised learning needs clear instructions, but unsupervised learning is like a curious detective. It tackles unlabeled data, where information lacks predefined categories. Imagine a box of unlabeled photos – faces, landscapes, objects all jumbled together. Unsupervised algorithms sift through this data, uncovering hidden patterns and groupings (clusters) on their own. This ability to unearth relationships makes it a secret weapon for various tasks:",
+      },
+      {
+        title: "Common Algorithms of Unsupervised Learning",
+        content: [
+          {
+            title: "K-means Clustering",
+            content:
+              "Imagine sorting those unlabeled photos. K-means helps create predefined categories (clusters) and assigns data points to the most fitting one.",
+            icon: <img src="/img/ml/k-mean-clustering.jpeg"></img>,
+          },
+          {
+            title: "Neural Networks",
+            content:
+              "These powerful algorithms act like complex brains, uncovering intricate patterns and relationships within unlabeled data, even when they're subtle or hidden.",
+            icon: <img src="/img/ml/neural_network.png"></img>,
+          },
+          {
+            title: "Probabilistic Clustering Methods",
+            content:
+              "This approach assigns probabilities to data points belonging to specific clusters, providing a more nuanced understanding of the groupings.",
+            icon: <img src="/img/ml/probability-cluster.webp"></img>,
+          },
+        ],
+      },
+    ],
+    "linear-regression": [
+      {
+        title: "Linear Regression",
+        content: "",
+      },
+
+      {
+        title: "What is Linear Regression?",
         content:
           "Linear regression is one of the most fundamental and widely used machine learning algorithms. It is used to establish the relationship between two variables, one independent and the other dependent. The dependent variable is the one whose value needs to be predicted, and the independent variable is the one that helps in making the prediction. The relationship between the two variables is established by fitting a straight line to the data points. This line is called the regression line, and it is used to predict the value of the dependent variable for any given value of the independent variable. Linear regression is used in various fields like finance, economics, marketing, and healthcare to make predictions and decisions based on data.",
+        image: "/img/ml/lr2.png",
       },
       {
         title: "Simple Linear Regression",
         content:
           "In a simple linear regression, there is one independent variable and one dependent variable. The model estimates the slope and intercept of the line of best fit, which represents the relationship between the variables. The slope represents the change in the dependent variable for each unit change in the independent variable, while the intercept represents the predicted value of the dependent variable when the independent variable is zero. Linear regression is a quiet and the simplest statistical regression technique used for predictive analysis in machine learning. Linear regression shows the linear relationship between the independent(predictor) variable i.e. X-axis and the dependent(output) variable i.e. Y-axis, called linear regression. If there is a single input variable X(independent variable), such linear regression is simple linear regression.",
         image: "/img/ml/lr2.jpeg",
-      },
-      {
-        title: "Goal of Linear Regression",
-        content:
-          "The goal of the linear regression algorithm is to get the best values for B0 and B1 to find the best fit line. The best fit line is a line that has the least error which means the error between predicted values and actual values should be minimum.",
       },
       {
         title: "Terms used in Linear Regression",
@@ -660,6 +702,17 @@ const Data = [
             ),
           },
         ],
+      },
+    ],
+    "logistic-regression": [
+      {
+        title: "Logistic Regression",
+        content: "",
+      },
+      {
+        title: "What is Logistic Regression?",
+        content:
+          "Logistic regression is a type of regression analysis used to predict the outcome of a categorical dependent variable based on one or more predictor variables. It's used when the dependent variable is binary (e.g., yes/no, 0/1, true/false) and the independent variables can be continuous or categorical. Logistic regression models the probability that the dependent variable belongs to a particular category. It's widely used in various fields like healthcare, marketing, finance, and social sciences for tasks like predicting customer churn, classifying spam emails, and diagnosing diseases.",
       },
     ],
   },

@@ -1,4 +1,4 @@
-import data from "../Data";
+import data from "../../../data/services";
 import React from "react";
 import ServiceTitle from "@/components/ourServices/ServiceTitle";
 import RowThin from "@/components/ourServices/rowThin";

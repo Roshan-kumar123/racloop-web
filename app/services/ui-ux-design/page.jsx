@@ -1,5 +1,5 @@
 import React from "react"; // Add this line
-import data from "../Data";
+import data from "../../../data/services";
 import "../../style/globals.css";
 import ServiceTitle from "@/components/ourServices/ServiceTitle";
 import RowThin from "@/components/ourServices/rowThin";

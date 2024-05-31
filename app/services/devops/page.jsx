@@ -1,5 +1,5 @@
 import ServiceTitle from "@/components/ourServices/ServiceTitle";
-import data from "../Data";
+import data from "../../../data/services";
 import "../../style/globals.css";
 import RowThin from "@/components/ourServices/rowThin";
 import StepsInfo from "@/components/ourServices/stepsInfo";

@@ -1,5 +1,5 @@
 import ServiceTitle from "@/components/ourServices/ServiceTitle";
-import Data from "@/data/machineLearningData";
+import Data from "@/data/machinelearning";
 import Defination from "@/components/ourServices/Defination-block";
 import RowThin from "@/components/ourServices/rowThin";
 import "../../../style/globals.css";
@@ -17,11 +17,6 @@ export default function Page({ params }) {
         <RowThin data={data[2]} />
         <ImageDesc data={data[3]} />
         <Defination data={data[4]} />
-        <img
-          src={data[4].image}
-          alt={data[4].title}
-          className="h-[200px] md:h-[400px]"
-        />
         <CodeBlock data={data[5]} />
         <StepsInfo data={data[6]} />
       </>

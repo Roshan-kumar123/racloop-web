@@ -1,15 +1,16 @@
 export default function Defination({ data }) {
   return (
     <>
-      <div className="p-10">
-        <h1 className="mb-4 text-4xl font-bold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-black text-center p-10">
+      <div className="flex flex-col p-10 justify-center items-center text-center">
+        <div className="text-4xl font-bold text-gray-900 md:text-5xl lg:text-6xl p-10 w-auto">
           {data.title}
-        </h1>
+        </div>
         {data.content && (
-          <p className="mb-6 text-lg font-normal text-black lg:text-2xl sm:px-16 xl:px-48 text-center">
+          <div className="mb-6 text-lg font-normal text-black lg:text-2xl sm:px-16 xl:px-48">
             {data.content}
-          </p>
+          </div>
         )}
+        {data.image}
       </div>
     </>
   );
