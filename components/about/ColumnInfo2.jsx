@@ -2,13 +2,13 @@ export default function ColumnInfo2({ data }) {
   return (
     <>
       <div className="flex-col justify-center p-10">
-        <h1 className="text-5xl text-black font-bold text-center">
+        <h1 className="text-5xl text-black font-bold text-center mb-5">
           {data.title}
         </h1>
         <div className="flex flex-wrap justify-center">
           {data.content.map((item, index) => {
             return (
-              <div className="flex w-[700px] p-5">
+              <div className="flex w-[700px] md:p-5">
                 <div className="flex items-center justify-center">
                   {item.icon}
                 </div>
