@@ -106,7 +106,11 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="nav-link" href="#about" onClick={handleClick}>
+                  <a
+                    className="nav-link"
+                    href="/about-us"
+                    onClick={handleClick}
+                  >
                     <span>About Us</span>
                   </a>
                 </li>
@@ -130,8 +134,21 @@ const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="nav-link" href="#contact" onClick={handleClick}>
+                  <a
+                    className="nav-link"
+                    href="/contact-us"
+                    onClick={handleClick}
+                  >
                     <span>Contact</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="nav-link"
+                    href="/machine-learning"
+                    onClick={handleClick}
+                  >
+                    <span>Learn ML</span>
                   </a>
                 </li>
               </ul>

@@ -5,6 +5,7 @@ import Defination from "@/components/ourServices/Defination-block";
 import RowThin from "@/components/ourServices/rowThin";
 import "../style/globals.css";
 import ColumnInfo from "@/components/ourServices/Column-Info";
+import LinkBlock from "@/components/machine-learning/LinkBlock";
 export default function MachineLearning() {
   const data = Data[0]["machine-learning"];
   return (
@@ -14,6 +15,7 @@ export default function MachineLearning() {
       <RowThin data={data[2]} />
       <Defination data={data[3]} />
       <ColumnInfo data={data[4]} />
+      <LinkBlock data={data[5]} />
     </>
   );
 }
