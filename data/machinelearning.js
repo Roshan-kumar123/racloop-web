@@ -322,6 +322,12 @@ const Data = [
           title: "The formula for Exponential Distribution",
           content:
             "The exponential distribution is defined by a single parameter, λ (lambda), which represents the average rate of event occurrences. The probability density function of the exponential distribution is given by:",
+          image: (
+            <img
+              src="/img/ml/exponentialFormula.png"
+              className="h-[200px] w-[400px]"
+            ></img>
+          ),
         },
         {
           title: "Sample Code",
@@ -394,13 +400,18 @@ const Data = [
           title: "Formula for Geometric Distribution",
           content:
             "The probability mass function (PMF) of the geometric distribution is given by:",
-          image: "/img/ml/geometricFormula.png",
+          image: (
+            <img
+              src="/img/ml/geometricalFormula.png"
+              className="h-[150px] w-[500px]"
+            ></img>
+          ),
         },
         {
           title: "Sample Code",
           content:
             "import numpy as np<br>import matplotlib.pyplot as plt<br>from scipy.stats import geom<br><br># Geometric Distribution<br># Define the probability of success (p)<br>p = 1/6 # Probability of rolling a six on a fair six-sided die<br># Generate x values (number of trials)<br>x = np.arange(1, 25, 1)  # Geometric distribution starts from 1<br><br># Calculate the probability mass function (PMF) for the geometric distribution<br>pmf = geom.pmf(x, p)<br><br># Plot the PMF<br>plt.figure(figsize=(12, 8))<br>plt.bar(x, pmf, color='darkblue')<br>plt.title('Geometric Distribution', fontsize=16)<br>plt.xlabel('Number of Trials')<br>plt.ylabel('Probability')<br>plt.show()",
-          output: "/img/ml/geometricOutput.png",
+          output: "/img/ml/geometricalOutput.png",
         },
         {
           title: "Applications of Geometric Distribution",
@@ -488,6 +499,39 @@ const Data = [
             content:
               "This approach assigns probabilities to data points belonging to specific clusters, providing a more nuanced understanding of the groupings.",
             icon: <img src="/img/ml/probability-cluster.webp"></img>,
+          },
+        ],
+      },
+      {
+        title: "Learn more topics in Machine Learning",
+        content: [
+          {
+            title: "Learn about Normal Distribution",
+            href: "/machine-learning/distributions/normal",
+          },
+          {
+            title: "Learn about Binomial Distribution",
+            href: "/machine-learning/distributions/binomial",
+          },
+          {
+            title: "Learn about Poisson Distribution",
+            href: "/machine-learning/distributions/poisson",
+          },
+          {
+            title: "Learn about Exponential Distribution",
+            href: "/machine-learning/distributions/exponential",
+          },
+          {
+            title: "Learn about Geometric Distribution",
+            href: "/machine-learning/distributions/geometrical",
+          },
+          {
+            title: "Learn about Linear Regression",
+            href: "/machine-learning/linear-regression",
+          },
+          {
+            title: "Learn about Logistic Regression",
+            href: "/machine-learning/logistic-regression",
           },
         ],
       },
@@ -713,6 +757,13 @@ const Data = [
         title: "What is Logistic Regression?",
         content:
           "Logistic regression is a type of regression analysis used to predict the outcome of a categorical dependent variable based on one or more predictor variables. It's used when the dependent variable is binary (e.g., yes/no, 0/1, true/false) and the independent variables can be continuous or categorical. Logistic regression models the probability that the dependent variable belongs to a particular category. It's widely used in various fields like healthcare, marketing, finance, and social sciences for tasks like predicting customer churn, classifying spam emails, and diagnosing diseases.",
+      },
+      {
+        title:
+          "Why do we use Logistic Regression rather than Linear Regression?",
+        content:
+          "Linear regression and logistic regression are both workhorses in machine learning, but they tackle different tasks.  While linear regression predicts continuous values (like house prices), logistic regression is designed for binary outcomes (yes/no or pass/fail).  Imagine predicting customer churn - did they churn or not? Logistic regression is ideal here, providing a probability of churn,  whereas linear regression wouldn't be suitable for this classification problem.",
+        image: "/img/ml/lr7.png",
       },
     ],
   },

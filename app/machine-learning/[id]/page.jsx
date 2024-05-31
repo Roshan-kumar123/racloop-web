@@ -15,8 +15,6 @@ export default function LinearRegression({ params }) {
   return (
     <>
       <ServiceTitle data={data[0]} />
-      {/* <ImageDesc3 data={data[1]} />
-      <RowThin data={data[2]} /> */}
       <ImageDesc3 data={data[1]} />
       <ImageDesc4 data={data[2]} />
       <ColumnInfo data={data[3]} />
