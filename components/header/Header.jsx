@@ -22,16 +22,16 @@ const Header = () => {
       window.removeEventListener("scroll", changeBackground);
     };
   }, []);
-  function ititScrollspy() {
-    addScrollspy("nav-link");
-  }
-  useEffect(() => {
-    window.addEventListener("scroll", ititScrollspy);
+  // function ititScrollspy() {
+  //   addScrollspy("nav-link");
+  // }
+  // useEffect(() => {
+  //   window.addEventListener("scroll", ititScrollspy);
 
-    return () => {
-      window.removeEventListener("scroll", ititScrollspy);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", ititScrollspy);
+  //   };
+  // }, []);
 
   const styles = {
     logo: {
@@ -100,11 +100,7 @@ const Header = () => {
               </Link>
               <ul className="anchor_nav navbar-nav ml-auto scrollspyLinks">
                 <li>
-                  <a
-                    className="nav-link current"
-                    href="#home"
-                    onClick={handleClick}
-                  >
+                  <a className="nav-link" href="/" onClick={handleClick}>
                     <span>Home</span>
                   </a>
                 </li>

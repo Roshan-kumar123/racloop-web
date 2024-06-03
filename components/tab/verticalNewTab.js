@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Link from "next/link";
 // import { PiBlueprint } from "react-icons/pi";
 import {
   FaPaintBrush,
@@ -52,31 +53,31 @@ const tabs = [
         <div className="tab_content_div">
           <div className="tab_content_card">
             <div className="solution-box">
-              <FaPaintBrush className="tab_icon" />
-              <p>UX/UI Design</p>
+              <FaPaintBrush className="tab_icon mb-3" />
+              <Link href={"/services/ui-ux-design-services"}>UX/UI Design</Link>
             </div>
 
             <div className="solution-box">
-              <FaProductHunt className="tab_icon" />
+              <FaProductHunt className="tab_icon mb-3" />
               <p>Product Development</p>
             </div>
 
             <div className="solution-box">
-              <FaVial className="tab_icon" />
+              <FaVial className="tab_icon mb-3" />
               <p>Test Automation</p>
             </div>
 
             <div className="solution-box">
-              <FaCloud className="tab_icon" />
-              <p>
+              <FaCloud className="tab_icon mb-3" />
+              <Link href="/services/devops">
                 Deployment, DevOps &
                 <br />
                 Integrations
-              </p>
+              </Link>
             </div>
 
             <div className="solution-box">
-              <FaSearch className="tab_icon" />
+              <FaSearch className="tab_icon mb-3" />
               <p>
                 Product Discovery/
                 <br />
@@ -85,22 +86,24 @@ const tabs = [
             </div>
 
             <div className="solution-box">
-              <FaWarehouse className="tab_icon" />
-              <p>Product Sustenance</p>
+              <FaWarehouse className="tab_icon mb-3" />
+              <Link href={"/services/product-sustenance"}>
+                Product Sustenance
+              </Link>
             </div>
 
             <div className="solution-box">
-              <FaCogs className="tab_icon" />
+              <FaCogs className="tab_icon mb-3" />
               <p>Infrastructure Automation</p>
             </div>
 
             <div className="solution-box">
-              <FaUsers className="tab_icon" />
+              <FaUsers className="tab_icon mb-3" />
               <p>Smart Teams</p>
             </div>
 
             <div className="solution-box">
-              <FaRedo className="tab_icon" />
+              <FaRedo className="tab_icon mb-3" />
               <p>Modernization</p>
             </div>
           </div>
@@ -123,27 +126,27 @@ const tabs = [
         <div className="tab_content_div">
           <div className="tab_content_card">
             <div className="solution-box">
-              <AiOutlineFileText className="tab_icon" />
+              <AiOutlineFileText className="tab_icon mb-3" />
               <p>Consultation</p>
             </div>
 
             <div className="solution-box">
-              <FaSearch className="tab_icon" />
+              <FaSearch className="tab_icon mb-3" />
               <p>Discovery</p>
             </div>
 
             <div className="solution-box">
-              <AiOutlineBulb className="tab_icon" />
+              <AiOutlineBulb className="tab_icon mb-3" />
               <p>Innovation as a Service</p>
             </div>
 
             <div className="solution-box">
-              <FaTools className="tab_icon" />
+              <FaTools className="tab_icon mb-3" />
               <p>Prototype & POC</p>
             </div>
 
             <div className="solution-box">
-              <FaRocket className="tab_icon" />
+              <FaRocket className="tab_icon mb-3" />
               <p>MVP</p>
             </div>
           </div>
@@ -166,57 +169,57 @@ const tabs = [
         <div className="tab_content_div">
           <div className="tab_content_card">
             <div className="solution-box">
-              <AiOutlineRobot className="tab_icon" />
+              <AiOutlineRobot className="tab_icon mb-3" />
               <p>Artificial Intelligence</p>
             </div>
 
             <div className="solution-box">
-              <AiFillExperiment className="tab_icon" />
+              <AiFillExperiment className="tab_icon mb-3" />
               <p>Machine Learning</p>
             </div>
 
             <div className="solution-box">
-              <IoMdGlobe className="tab_icon" />
+              <IoMdGlobe className="tab_icon mb-3" />
               <p>AR/VR</p>
             </div>
 
             <div className="solution-box">
-              <IoIosGitBranch className="tab_icon" />
+              <IoIosGitBranch className="tab_icon mb-3" />
               <p>IoT</p>
             </div>
 
             <div className="solution-box">
-              <FaRobot className="tab_icon" />
+              <FaRobot className="tab_icon mb-3" />
               <p>RPA</p>
             </div>
 
             <div className="solution-box">
-              <IoMdPhonePortrait className="tab_icon" />
+              <IoMdPhonePortrait className="tab_icon mb-3" />
               <p>Wearables</p>
             </div>
 
             <div className="solution-box">
-              <IoLogoGameControllerB className="tab_icon" />
+              <IoLogoGameControllerB className="tab_icon mb-3" />
               <p>Metaverse</p>
             </div>
 
             <div className="solution-box">
-              <FaLink className="tab_icon" />
+              <FaLink className="tab_icon mb-3" />
               <p>Blockchain</p>
             </div>
 
             <div className="solution-box">
-              <AiFillPieChart className="tab_icon" />
+              <AiFillPieChart className="tab_icon mb-3" />
               <p>Analytics</p>
             </div>
 
             <div className="solution-box">
-              <FaBusinessTime className="tab_icon" />
+              <FaBusinessTime className="tab_icon mb-3" />
               <p>Business Intelligence</p>
             </div>
 
             <div className="solution-box">
-              <IoIosCube className="tab_icon" />
+              <IoIosCube className="tab_icon mb-3" />
               <p>Data Warehousing</p>
             </div>
           </div>
@@ -237,32 +240,32 @@ const tabs = [
         <div className="tab_content_div">
           <div className="tab_content_card">
             <div className="solution-box">
-              <FaLock className="tab_icon" />
+              <FaLock className="tab_icon mb-3" />
               <p>Dev Secure Ops</p>
             </div>
 
             <div className="solution-box">
-              <FaCode className="tab_icon" />
+              <FaCode className="tab_icon mb-3" />
               <p>Technology & Architecture</p>
             </div>
 
             <div className="solution-box">
-              <FaCloud className="tab_icon" />
+              <FaCloud className="tab_icon mb-3" />
               <p>Cloud</p>
             </div>
 
             <div className="solution-box">
-              <FaShieldAlt className="tab_icon" />
+              <FaShieldAlt className="tab_icon mb-3" />
               <p>Cybersecurity</p>
             </div>
 
             <div className="solution-box">
-              <FaSalesforce className="tab_icon" />
+              <FaSalesforce className="tab_icon mb-3" />
               <p>Salesforce</p>
             </div>
 
             <div className="solution-box">
-              <FaShoppingCart className="tab_icon" />
+              <FaShoppingCart className="tab_icon mb-3" />
               <p>Digital Commerce</p>
             </div>
           </div>

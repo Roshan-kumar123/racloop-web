@@ -184,34 +184,26 @@ const Footer = () => {
                   <i className="ti-map"></i>
                 </div>
                 <span className="media-body">
-                  123 Stree New York City , <br />
-                  United States Of America <br />
-                  NY 750065.
+                  B-18, Second Floor, Institutional Area, <br />
+                  Sector 32, Gurugram,
+                  <br /> Haryana 122001
                 </span>
               </div>
               {/* End media */}
 
-              <div className="media">
+              <div className="media flex justify-center items-center">
                 <div className="icon">
                   <i className="ti-email"></i>
                 </div>
-                <span className="media-body">
-                  support@domain.com
-                  <br />
-                  info@domain.com
-                </span>
+                <span className="media-body">info@racloop.com</span>
               </div>
               {/* End media */}
 
-              <div className="media">
+              <div className="media flex justify-center items-center">
                 <div className="icon">
                   <i className="ti-mobile"></i>
                 </div>
-                <span className="media-body">
-                  +044 966 9696 636
-                  <br />
-                  +044 966 9696 636
-                </span>
+                <span className="media-body">+91 82647 14180</span>
               </div>
               {/* End media */}
             </div>
