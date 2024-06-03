@@ -469,11 +469,13 @@ const Data = [
             title: "Classification",
             content:
               "Supervised learning's classification tasks are like sorting mail. Algorithms learn from labeled examples (spam/not spam emails) and predict categories for new data (yes/no for spam). This is similar to image recognition (cat, dog) or fraud detection (fraudulent/legitimate transactions). The key is labeled data with predefined categories. The model then sorts unseen data into these categories, making classification a powerful tool for organizing information.",
+            icon: <img src="/img/ml/classification.png"></img>,
           },
           {
             title: "Regression",
             content:
               "Unlike classification with its predefined buckets, regression in supervised learning deals with predicting continuous values. Think weather forecasting (temperature) or stock price prediction (price in dollars). The model learns from labeled data where each point has a numerical value. By understanding these relationships, it estimates values for new data. This makes regression powerful for tasks like weather forecasting or sales prediction, where pinpointing a specific number is key.",
+            icon: <img src="/img/ml/lr2.jpeg"></img>,
           },
         ],
       },

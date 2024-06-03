@@ -22,8 +22,7 @@ const HomeOne = () => {
       <Slider />
       {/* End Banner Section */}
 
-      
-        {/* Services */}
+      {/* Services */}
       <section
         id="services"
         className="section services-section gray-bg scrollSpysection"
@@ -45,7 +44,6 @@ const HomeOne = () => {
       </section>
       {/* End Services */}
 
-
       {/* <ReactTab /> */}
       <section cal></section>
       <NewTab />
@@ -60,7 +58,6 @@ const HomeOne = () => {
       </section>
       {/* End About Me */}
 
-  
       {/*  Skills */}
       <section className="section skill-section">
         <div className="container">
@@ -85,7 +82,6 @@ const HomeOne = () => {
           <Portfolio />
         </div>
       </section> */}
-   
 
       {/* Blog */}
       {/* <section id="blog" className="section gray-bg scrollSpysection">
@@ -106,15 +102,13 @@ const HomeOne = () => {
       </section> */}
       {/*  End Blog */}
 
-
-         {/* End Portfolio */}
+      {/* End Portfolio */}
 
       <div className="section testimonial gray-bg">
         <div className="container">
-           <div className="row justify-content-center section-title text-center">
+          <div className="row justify-content-center section-title text-center">
             <div className="col-lg-7">
               <h3 className="font-alt">Our Founder's</h3>
-            
             </div>
           </div>
           <Testimonial />
@@ -195,11 +189,11 @@ const HomeOne = () => {
       {/* End Contact */}
 
       {/* Footer */}
-      <footer className="footer white">
+      {/* <footer className="footer white">
         <div className="container">
           <Footer />
         </div>
-      </footer>
+      </footer> */}
       {/*  End Footer */}
     </>
   );

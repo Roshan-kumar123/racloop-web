@@ -41,11 +41,11 @@ const NotFound = () => {
       {/* End Error Page Wrapper */}
 
       {/* Footer */}
-      <footer className="footer white">
+      {/* <footer className="footer white">
         <div className="container">
           <Footer />
         </div>
-      </footer>
+      </footer> */}
       {/* End footer */}
     </>
   );

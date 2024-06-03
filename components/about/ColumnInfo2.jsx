@@ -8,7 +8,7 @@ export default function ColumnInfo2({ data }) {
         <div className="flex flex-wrap justify-center">
           {data.content.map((item, index) => {
             return (
-              <div className="flex w-[700px] md:p-5">
+              <div className="flex w-[700px] p-3 md:p-5">
                 <div className="flex items-center justify-center">
                   {item.icon}
                 </div>

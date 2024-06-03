@@ -8,6 +8,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../public/assets/scss/main.scss";
 import { Nunito } from "next/font/google";
+import Header from "@/components/header/Header";
+import Footer from "@/components/footer/Footer1";
+import ".//style/globals.css";
 const nunitoFont = Nunito({
   weight: ["200", "300", "400", "600", "700", "800", "900"],
   subsets: ["latin"],
@@ -21,7 +24,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={nunitoFont.variable}>
         <ScrollToTop />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
