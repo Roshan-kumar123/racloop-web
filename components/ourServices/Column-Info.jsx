@@ -1,9 +1,6 @@
 export default function ColumnInfo({ data }) {
   return (
-    <section
-      className="dark:text-gray-800"
-      style={{ backgroundColor: "rgb(255,244,236)" }}
-    >
+    <section className="dark:text-gray-800">
       <div className="container mx-auto flex flex-col p-10">
         <div className="text-5xl text-black font-bold text-center mb-8">
           {data.title}

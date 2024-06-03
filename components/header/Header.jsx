@@ -47,9 +47,13 @@ const Header = () => {
   return (
     <>
       {/* Header */}
-      <header className={navbar ? "main-header fixed-header" : "main-header"}>
+      <header
+        className={
+          navbar ? "main-header fixed-header" : "main-header  fixed-header"
+        }
+      >
         <nav className="container">
-          <div className=" header-transparent">
+          <div className=" header-transparent bg-white">
             {/* Brand */}
             <Link href="/">
               {/* <Image
@@ -114,24 +118,15 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <a
+                  <Link
                     className="nav-link"
-                    href="#services"
+                    href="/services"
                     onClick={handleClick}
                   >
                     <span>Services</span>
-                  </a>
+                  </Link>
                 </li>
-                <li>
-                  <a className="nav-link" href="#work" onClick={handleClick}>
-                    <span>Portfolio</span>
-                  </a>
-                </li>
-                <li>
-                  <a className="nav-link" href="#blog" onClick={handleClick}>
-                    <span>Blog</span>
-                  </a>
-                </li>
+
                 <li>
                   <Link
                     className="nav-link"
