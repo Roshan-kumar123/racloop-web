@@ -1,7 +1,7 @@
 export default function StepsInfo({ data }) {
   return (
     <div
-      className="flex flex-col justify-around items-center dark:bg-gray-100 p-20"
+      className="flex flex-col justify-around dark:bg-gray-100 p-5"
       style={{ backgroundColor: "rgb(255,244,236)" }}
     >
       <div className="text-4xl md:text-5xl text-black font-bold text-center">

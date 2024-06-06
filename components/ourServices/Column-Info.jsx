@@ -1,7 +1,7 @@
 export default function ColumnInfo({ data }) {
   return (
     <section className="dark:text-gray-800">
-      <div className="container mx-auto flex flex-col p-10">
+      <div className="container flex flex-col p-10">
         <div className="text-5xl text-black font-bold text-center mb-8">
           {data.title}
         </div>
@@ -13,7 +13,7 @@ export default function ColumnInfo({ data }) {
         <div className="divide-y dark:divide-gray-300">
           {data.content.map((item, index) => {
             return (
-              <div className="grid justify-center grid-cols-4 p-8 mx-auto space-y-8 lg:space-y-0">
+              <div className="grid justify-center grid-cols-4 p-8 space-y-8 lg:space-y-0">
                 <div className="flex md:mr-10 items-center justify-center lg:col-span-1 col-span-full">
                   {item.icon}
                 </div>
