@@ -1,10 +1,25 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function LinkCard({ data }) {
+  let [hover, setHover] = useState(false);
+  function handleMouseEnter() {
+    setHover(true);
+  }
+  function handleMouseLeave() {
+    setHover(false);
+  }
   return (
     <Link
       href={data.href}
-      class="inline-flex items-center justify-center p-4 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700 dark:hover:text-white"
+      class="inline-flex items-center justify-center p-4 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-800 dark:hover:text-black"
+      style={{
+        backgroundColor: "rgb(225, 150, 83)",
+        opacity: hover ? 0.9 : 1,
+      }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <span class="w-full">{data.title}</span>
       <svg

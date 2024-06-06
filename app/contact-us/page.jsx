@@ -7,7 +7,7 @@ export default function ContactUs() {
         <div class="container px-6 py-12 mx-auto">
           <div>
             <h1
-              class="font-medium text-5xl"
+              class="font-medium text-5xl mt-10"
               style={{ color: "rgb(225,150,83)" }}
             >
               Contact us

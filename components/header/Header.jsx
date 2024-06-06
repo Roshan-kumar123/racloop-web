@@ -49,7 +49,9 @@ const Header = () => {
       {/* Header */}
       <header
         className={
-          navbar ? "main-header fixed-header" : "main-header  fixed-header"
+          !navbar
+            ? "main-header fixed-header"
+            : "main-header  fixed-header border-b-2 border-gray-200"
         }
       >
         <nav className="container">

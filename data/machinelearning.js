@@ -1,10 +1,24 @@
-import { FaNetworkWired, FaSearch, FaUser } from "react-icons/fa";
+import {
+  FaFlask,
+  FaNetworkWired,
+  FaSearch,
+  FaUser,
+  FaUsers,
+} from "react-icons/fa";
 import { TbCurrencyDollarOff, TbTargetArrow } from "react-icons/tb";
 import { PiListMagnifyingGlass, PiPersonArmsSpreadFill } from "react-icons/pi";
 import { GrPerformance } from "react-icons/gr";
-import { MdCreditScore, MdGroups } from "react-icons/md";
+import {
+  MdApps,
+  MdCreditScore,
+  MdGroups,
+  MdOutlineNetworkLocked,
+  MdOutlinePattern,
+} from "react-icons/md";
 import { IoIosCash } from "react-icons/io";
 import { GiHealthNormal } from "react-icons/gi";
+import { FaFilterCircleXmark, FaMagnifyingGlass } from "react-icons/fa6";
+import { RiCustomerService2Fill } from "react-icons/ri";
 
 const Data = [
   {
@@ -538,6 +552,14 @@ const Data = [
             title: "Learn about Logistic Regression",
             href: "/machine-learning/logistic-regression",
           },
+          {
+            title: "Learn about K-nearest Neighbors",
+            href: "/machine-learning/k-nearest-neighbors",
+          },
+          {
+            title: "Learn about Decision Trees",
+            href: "/machine-learning/decision-trees",
+          },
         ],
       },
     ],
@@ -967,6 +989,262 @@ const Data = [
             icon: (
               <MdGroups
                 style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+        ],
+      },
+    ],
+    "k-nearest-neighbors": [
+      {
+        title: "K-Nearest Neigbhors",
+        content: "",
+      },
+      {
+        title: "What is KNN?",
+        content:
+          "K-Nearest Neighbors (KNN) is a simple, easy-to-understand algorithm that can be used to solve classification and regression problems. It is a type of instance-based learning, or lazy learning, where the function is only approximated locally and all computation is deferred until function evaluation. KNN works by finding the distances between a query and all the examples in the data, selecting the specified number examples (K) closest to the query, then votes for the most frequent label (in the case of classification) or averages the labels (in the case of regression).",
+        image: "/img/ml/knn1.png",
+      },
+      {
+        title: "How does KNN work?",
+        content: [
+          {
+            title: "Step 1: Choose the number of neighbors (K)",
+            content:
+              "The first step in KNN is to choose the number of neighbors (K) to consider when making a prediction. K is a hyperparameter that must be specified by the user.",
+          },
+          {
+            title: "Step 2: Calculate the distance",
+            content:
+              "Next, the algorithm calculates the distance between the query point and all the training examples. The distance metric used can vary, with Euclidean distance being a common choice.",
+          },
+          {
+            title: "Step 3: Find the K nearest neighbors",
+            content:
+              "The algorithm then selects the K training examples that are closest to the query point based on the calculated distance.",
+          },
+          {
+            title: "Step 4: Make a prediction",
+            content:
+              "For classification problems, the algorithm assigns the most frequent class label among the K nearest neighbors to the query point. For regression problems, the algorithm calculates the average of the labels of the K nearest neighbors.",
+          },
+        ],
+        image: <img src="/img/ml/knn2.png"></img>,
+      },
+      {
+        title: "Choosing the right value of K",
+        content:
+          "The choice of K has a significant impact on the performance of the KNN algorithm. A small value of K can lead to overfitting, where the model is too sensitive to noise in the data. On the other hand, a large value of K can lead to underfitting, where the model is too simple to capture the underlying patterns in the data. It is important to choose an appropriate value of K that balances bias and variance to achieve the best performance. This can be done using techniques like cross-validation or grid search.",
+        image: <img src="/img/ml/knn3.png"></img>,
+      },
+      {
+        title: "Sample Code",
+        content:
+          "import numpy as np<br/>import matplotlib.pyplot as plt<br/>import seaborn as sn<br/>from sklearn.datasets import load_digits<br/>from sklearn.model_selection import train_test_split<br/>from sklearn.metrics import accuracy_score, confusion_matrix<br/>from sklearn.neighbors import KNeighborsClassifier<br/><br/># Load the iris dataset<br/>data = load_digits()<br/>X = data.data<br/>y = data.target<br/><br/># Split the data into training and testing sets<br/>X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)<br/><br/># Create a KNN classifier<br/>knn = KNeighborsClassifier(n_neighbors=5)<br/><br/># Train the classifier<br/>knn.fit(X_train, y_train)<br/><br/># Make predictions<br/>y_pred = knn.predict(X_test)<br/><br/># Calculate the accuracy<br/>accuracy = accuracy_score(y_test, y_pred)<br/><br/><br/># Confusion matrix<br/>cm = confusion_matrix(y_test, y_pred)<br/>plt.figure(figsize=(7,5))<br/>sn.heatmap(cm, annot=True)<br/>plt.xlabel('Predicted')<br/>plt.ylabel('Truth')<br/>plt.title('Accuracy:{accuracy:.4f}'.format(accuracy = accuracy))<br/>plt.show()",
+        output: "/img/ml/knnOutput.png",
+      },
+      {
+        title: "Applications of KNN",
+        content: [
+          {
+            title: "Recommendation Systems",
+            content:
+              "KNN is widely used in recommendation systems to suggest products, movies, or services to users based on their similarity to other users. By analyzing user behavior and preferences, KNN can identify similar users and recommend items they might like.",
+            icon: (
+              <MdApps style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Anomaly Detection",
+            content:
+              "KNN can be used for anomaly detection in various domains, such as fraud detection, network security, and fault detection. By identifying data points that are significantly different from the rest, KNN can help detect anomalies and potential threats.",
+            icon: (
+              <FaMagnifyingGlass
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Pattern Recognition",
+            content:
+              "KNN is used in pattern recognition tasks, such as image recognition, speech recognition, and handwriting recognition. By comparing new data points to existing patterns, KNN can classify or recognize different objects or patterns.",
+            icon: (
+              <MdOutlinePattern
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Spam Filtering",
+            content:
+              "KNN can be used in spam filtering to classify emails as spam or non-spam based on their similarity to known spam emails. By analyzing the content and features of emails, KNN can help filter out unwanted messages.",
+            icon: (
+              <FaFilterCircleXmark
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+        ],
+      },
+    ],
+    "decision-trees": [
+      {
+        title: "Decision Trees",
+        content: "",
+      },
+      {
+        title: "What is a Decision Tree?",
+        content:
+          "Decision trees are like flowcharts for data. Imagine a tree with branches – each branch represents a question about your data (e.g., is the customer age over 30?). By following the branch based on the answer (yes/no or specific value), you reach a leaf at the end, which holds the prediction (e.g., likely to buy the product).  This makes them easy to understand and interpret, allowing you to see how each question influences the final outcome.",
+        image: "/img/ml/dt-1.png",
+      },
+      {
+        title: "Terms used in Decision Trees",
+        content: [
+          {
+            title: "Root Node",
+            content:
+              "The top node of the tree, representing the entire dataset. It's the starting point for the decision-making process.",
+          },
+          {
+            title: "Internal Node",
+            content:
+              "Nodes that represent a decision point in the tree. They have branches leading to other nodes based on the decision outcome.",
+          },
+          {
+            title: "Leaf Node",
+            content:
+              "Nodes at the end of the tree that contain the final decision or prediction. They don't have any branches leading out.",
+          },
+          {
+            title: "Splitting",
+            content:
+              "The process of dividing a node into sub-nodes based on a specific attribute or feature. It helps create branches in the tree that lead to more specific decisions.",
+          },
+          {
+            title: "Pruning",
+            content:
+              "The process of removing branches or nodes from the tree to prevent overfitting. Pruning helps simplify the tree and improve its generalization to new data.",
+          },
+          {
+            title: "Entropy",
+            content:
+              "A measure of impurity or disorder in a dataset. In decision trees, entropy is used to determine the best split at each node. A lower entropy indicates a more homogenous group of data points.",
+          },
+        ],
+      },
+      {
+        title: "What is Entropy?",
+        content:
+          "Entropy is a measure of disorder or impurity in a dataset. In decision trees, entropy is used to determine the best split at each node. The goal is to create subsets that are as pure (homogeneous) as possible in terms of the target variable. A lower entropy indicates a more homogenous group of data points, making it easier to make predictions.",
+        image: <img src="/img/ml/dt-2.png"></img>,
+      },
+      {
+        title: "Information Gain",
+        content:
+          "Information gain is a measure of the reduction in entropy achieved by splitting a dataset based on a specific attribute. It helps the decision tree algorithm determine the best split at each node. The attribute that results in the highest information gain is chosen as the splitting criterion.",
+        image: <img src="/img/ml/dt-3.png"></img>,
+      },
+      {
+        title: "How does a Decision Tree work?",
+        content: [
+          {
+            title: "Step 1: Splitting",
+            content:
+              "The decision tree algorithm starts at the root node and splits the data into subsets based on the value of a specific attribute. The goal is to create subsets that are as pure (homogeneous) as possible in terms of the target variable.",
+            icon: (
+              <img src="/img/ml/dt-4.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+          {
+            title: "Step 2: Choosing the best split",
+            content:
+              "The algorithm evaluates different splits based on criteria like entropy or Gini impurity to determine the best split. It selects the split that maximizes the information gain or minimizes the impurity of the subsets.",
+            icon: (
+              <img src="/img/ml/dt-5.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+          {
+            title: "Step 3: Recursion",
+            content:
+              "The process of splitting and choosing the best split is repeated recursively for each subset until a stopping criterion is met. This criterion could be a maximum depth, minimum number of samples, or minimum impurity threshold.",
+            icon: <img src="/img/ml/dt-6.jpeg"></img>,
+          },
+        ],
+      },
+      {
+        title: "When to stop splitting?",
+        content: [
+          {
+            title: "Maximum Depth",
+            content:
+              "Limit the depth of the tree to prevent overfitting. A deeper tree can capture more complex patterns in the data but may also memorize noise.",
+          },
+          {
+            title: "Minimum Samples per Leaf",
+            content:
+              "Set a minimum number of samples required to be at a leaf node. This helps prevent the tree from splitting too much and capturing noise in the data.",
+          },
+          {
+            title: "Minimum Impurity Decrease",
+            content:
+              "Require a minimum decrease in impurity to split a node further. This helps control the growth of the tree and prevents overfitting.",
+          },
+        ],
+      },
+      {
+        title: "Sample Code",
+        content:
+          "import pandas as pd<br/>from sklearn.tree import DecisionTreeClassifier<br/>from sklearn.model_selection import train_test_split<br/>from matplotlib import pyplot as plt<br/>from sklearn.metrics import confusion_matrix<br/>import seaborn as sns<br/><br/># Load the data<br/>df = pd.read_csv('Decision-Trees/titanic.csv')<br/>input = df.drop(['PassengerId', 'Name', 'SibSp', 'Ticket', 'Cabin', 'Survived', 'Embarked', 'Parch'], axis = 'columns')<br/>target = df['Survived']<br/><br/># Preprocess the data <br/># Changing male female to 1 and 2 and filling the missing values<br/>input.Age = input.Age.fillna(input.Age.mean())<br/>input.Sex = input.Sex.map({'male':1, 'female' : 2})<br/><br/># Split the data<br/>X_train, X_test, y_train, y_test = train_test_split(input, target, test_size=0.2)<br/><br/># Create a model<br/>model = DecisionTreeClassifier()<br/><br/># Train the model<br/>model.fit(X_train, y_train)<br/><br/># Test the model<br/>score = (model.score(X_test, y_test))<br/><br/># Predict the model<br/>y_predicted = model.predict(X_test)<br/><br/># Plot the confusion matrix<br/>cm = confusion_matrix(y_test, y_predicted)<br/>plt.figure(figsize=(10,7))<br/>sns.heatmap(cm, annot=True)<br/>plt.xlabel('Predicted')<br/>plt.ylabel('Truth')<br/>plt.title('Accuracy: ' + str(score))<br/>plt.show()<br/>",
+        output: "/img/ml/dtOutput.png",
+      },
+      {
+        title: "Applications of Decision Trees",
+        content: [
+          {
+            title: "Customer Segmentation",
+            content:
+              "By analyzing customer data like demographics, purchase history, and website behavior, decision trees can segment customers into distinct groups. This allows companies to tailor marketing campaigns, product recommendations, and pricing strategies to specific customer segments, leading to more effective marketing and increased sales.",
+            icon: (
+              <FaUsers style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Risk Management and Fraud Detection",
+            content:
+              "Decision trees can be used to analyze financial data and user behavior to assess creditworthiness or identify fraudulent transactions. This helps companies make informed lending decisions and prevent financial losses.",
+            icon: (
+              <FaMagnifyingGlass
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Content Filtering and Recommendation Systems",
+            content:
+              "Decision trees can analyze user preferences and past interactions to categorize content (articles, videos) or recommend relevant products. This personalizes the user experience and keeps them engaged on platforms like streaming services or e-commerce websites.",
+            icon: (
+              <FaFlask style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Technical Support and Troubleshooting",
+            content:
+              "Decision trees can be used to create interactive troubleshooting guides or chatbots that guide users through problem-solving steps based on their answers to specific questions. This improves customer self-service options and reduces the burden on support teams.",
+            icon: (
+              <RiCustomerService2Fill
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Network Intrusion Detection",
+            content:
+              "Decision trees can be trained on historical data to identify patterns associated with network attacks. This helps companies detect and prevent security breaches in real-time.",
+            icon: (
+              <MdOutlineNetworkLocked
+                style={{ fontSize: "80px", color: "rgb(225, 150, 83)" }}
               />
             ),
           },
