@@ -51,11 +51,12 @@ const Header = () => {
         className={
           !navbar
             ? "main-header fixed-header"
-            : "main-header  fixed-header border-b-2 border-black"
+            : "main-header  fixed-header border-b-2"
         }
+        style={{ borderBottomColor: navbar ? "rgba(0,0,0,.2)" : null }}
       >
         <nav className="container">
-          <div className=" header-transparent bg-white">
+          <div className="header-transparent bg-white">
             {/* Brand */}
             <Link href="/">
               {/* <Image
