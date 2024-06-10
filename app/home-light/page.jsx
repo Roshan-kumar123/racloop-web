@@ -17,7 +17,6 @@ export const metadata = {
 const HomeOne = () => {
   return (
     <>
-      <Header />
       {/* End Header Section */}
       <Slider />
       {/* End Banner Section */}
