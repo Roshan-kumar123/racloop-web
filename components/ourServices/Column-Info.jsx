@@ -6,7 +6,7 @@ export default function ColumnInfo({ data }) {
           {data.title}
         </div>
         {data.subheading && (
-          <div className="text-2xl text-black text-center mt-5 p-2 pt-5 pb-5 md:text-3xl">
+          <div className="text-2xl text-black text-center p-2 pt-5 pb-5 md:text-3xl">
             {data.subheading}
           </div>
         )}

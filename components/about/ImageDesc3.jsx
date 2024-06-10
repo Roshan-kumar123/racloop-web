@@ -6,7 +6,7 @@ export default function ImageDesc3({ data, reverse = false }) {
     >
       <img
         src={data.image}
-        className="h-auto h-[300px] md:h-[500px] w-[700px] p-3 rounded border"
+        className="h-auto md:h-[500px] w-[700px] p-3 rounded border"
       ></img>
 
       <div
