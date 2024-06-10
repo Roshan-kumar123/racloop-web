@@ -51,7 +51,7 @@ const Header = () => {
         className={
           !navbar
             ? "main-header fixed-header"
-            : "main-header  fixed-header border-b-2 border-gray-200"
+            : "main-header  fixed-header border-b-2 border-black"
         }
       >
         <nav className="container">

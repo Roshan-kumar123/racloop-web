@@ -8,7 +8,6 @@ import Header from "@/components/header/Header";
 export default function AboutUs() {
   return (
     <>
-      <Header />
       <ServiceTitle data={data[0]} />
       <AboutData data={data[1]} />
       <ImageDesc3 data={data[3]} />
