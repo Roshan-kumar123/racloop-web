@@ -564,6 +564,10 @@ const Data = [
             title: "Learn about Decision Trees",
             href: "/machine-learning/decision-trees",
           },
+          {
+            title: "Learn about Support Vector Machines",
+            href: "/machine-learning/support-vector-machines",
+          },
         ],
       },
     ],
