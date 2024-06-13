@@ -13,6 +13,20 @@ export default function LinearRegression({ params }) {
   const name = params.id;
   const n = data.length;
 
+  if (name == "support-vector-machines") {
+    return (
+      <>
+        <ServiceTitle data={data[0]} />
+        <ImageDesc3 data={data[1]} />
+        <StepsInfo data={data[2]} />
+        <ColumnInfo data={data[3]} />
+        <ImageDesc data={data[4]} />
+        <CodeBlock data={data[n - 2]} />
+        <ColumnInfo2 data={data[n - 1]} />
+      </>
+    );
+  }
+
   if (params.id === "k-nearest-neighbors") {
     return (
       <>

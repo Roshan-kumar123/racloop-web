@@ -4,6 +4,10 @@ import {
   FaSearch,
   FaUser,
   FaUsers,
+  FaImage,
+  FaFileAlt,
+  FaDna,
+  FaChartLine,
 } from "react-icons/fa";
 import { TbCurrencyDollarOff, TbTargetArrow } from "react-icons/tb";
 import { PiListMagnifyingGlass, PiPersonArmsSpreadFill } from "react-icons/pi";
@@ -1246,6 +1250,175 @@ const Data = [
               <MdOutlineNetworkLocked
                 style={{ fontSize: "80px", color: "rgb(225, 150, 83)" }}
               />
+            ),
+          },
+        ],
+      },
+    ],
+    "support-vector-machines": [
+      {
+        title: "Support Vector Machines",
+        content: "",
+      },
+      {
+        title: "What is a Support Vector Machine?",
+        content:
+          "A Support Vector Machine (SVM) is a powerful supervised machine learning algorithm used for classification and regression tasks. It's particularly well-suited for complex datasets with many features. SVMs work by finding the optimal hyperplane that best separates the classes in the feature space. The hyperplane is chosen to maximize the margin between the classes, making it robust to noise and outliers. SVMs can handle both linear and non-linear data by using different kernel functions to transform the data into higher-dimensional space.",
+        image: "/img/ml/svm1.png",
+      },
+      {
+        title: "How does SVM work?",
+        content: [
+          {
+            title: "Step 1: Data Preparation",
+            content:
+              "The SVM algorithm starts by preparing the data for training. This involves selecting the features (independent variables) and the target variable (dependent variable) for classification or regression.",
+          },
+          {
+            title: "Step 2: Feature Transformation",
+            content:
+              "The algorithm transforms the data into a higher-dimensional space using a kernel function. This transformation allows the algorithm to find a hyperplane that separates the classes in the feature space.",
+          },
+          {
+            title: "Step 3: Finding the Optimal Hyperplane",
+            content:
+              "The SVM algorithm finds the hyperplane that maximizes the margin between the classes. The margin is the distance between the hyperplane and the nearest data points from each class.",
+          },
+          {
+            title: "Step 4: Support Vectors",
+            content:
+              "The data points that lie closest to the hyperplane are called support vectors. These points are crucial for defining the hyperplane and maximizing the margin.",
+          },
+          {
+            title: "Step 5: Classification or Regression",
+            content:
+              "Once the optimal hyperplane is found, the SVM algorithm can classify new data points based on which side of the hyperplane they fall. For regression tasks, SVMs predict continuous values based on the distance from the hyperplane.",
+          },
+          {
+            title: "Step 6: Hyperparameter Tuning",
+            content:
+              "The performance of an SVM model depends on hyperparameters like the choice of kernel function, regularization parameter (C), and kernel coefficient (gamma). Tuning these hyperparameters is essential for achieving the best performance on the data.",
+          },
+        ],
+      },
+      {
+        title: "Kernel Functions",
+        subheading:
+          "Kernel functions are used in SVMs to transform the data into a higher-dimensional space where it's easier to find a hyperplane that separates the classes. Different kernel functions can be used based on the data's characteristics and the complexity of the decision boundary required.",
+        content: [
+          {
+            title: "Polynomial Kernel",
+            content:
+              "The polynomial kernel is used when the data is non-linearly separable. It transforms the data into a higher-dimensional space using a polynomial transformation.",
+            icon: (
+              <img src="/img/ml/svm3.png" style={{ maxWidth: "400px" }}></img>
+            ),
+          },
+          {
+            title: "Radial Basis Function (RBF) Kernel",
+            content:
+              "The RBF kernel is a popular choice for SVMs as it can handle non-linear data effectively. It transforms the data into an infinite-dimensional space using a Gaussian function.",
+            icon: (
+              <img src="/img/ml/svm5.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+          {
+            title: "Sigmoid Kernel",
+            content:
+              "The sigmoid kernel is used to map the data into a higher-dimensional space using a hyperbolic tangent function. It's suitable for binary classification tasks.",
+            icon: (
+              <img src="/img/ml/svm4.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+        ],
+      },
+      {
+        title: "Hyperparameters",
+        content: [
+          {
+            title: "Kernel",
+            content:
+              "The kernel function used to transform the data into a higher-dimensional space. Common choices include linear, polynomial, RBF, and sigmoid kernels.",
+          },
+          {
+            title: "C",
+            content:
+              "The regularization parameter that controls the trade-off between maximizing the margin and minimizing the classification error. A higher value of C allows for more complex decision boundaries but may lead to overfitting.",
+          },
+          {
+            title: "Gamma",
+            content:
+              "The kernel coefficient for RBF, polynomial, and sigmoid kernels. A higher gamma value leads to more complex decision boundaries and can result in overfitting.",
+          },
+          {
+            title: "Degree",
+            content:
+              "The degree of the polynomial kernel function. It determines the complexity of the decision boundary for polynomial kernels.",
+          },
+        ],
+        image: <img src="/img/ml/svm6.png"></img>,
+      },
+      {
+        title: "Sample Code",
+        content:
+          "import pandas as pd<br/>from sklearn.model_selection import train_test_split<br/>from sklearn.svm import SVC<br/>from sklearn.metrics import accuracy_score,  confusion_matrix<br/>from sklearn.datasets import load_iris<br/>import matplotlib.pyplot as plt<br/>import seaborn as sns<br/><br/># Load the iris dataset<br/>iris = load_iris()<br/>iris_df = pd.DataFrame(iris.data, columns=iris.feature_names)<br/><br/># Split the dataset into training and testing sets<br/>X_train, X_test, y_train, y_test = train_test_split(iris_df, iris.target, test_size=0.2, random_state=42)<br/><br/># Create a Support Vector Machine (SVM) classifier<br/>clf = SVC()<br/><br/># Train the classifier on the training data<br/>clf.fit(X_train, y_train)<br/><br/># Make predictions on the testing data<br/>y_pred = clf.predict(X_test)<br/><br/># Calculate the accuracy of the classifier<br/>accuracy = accuracy_score(y_test, y_pred)<br/><br/># Confusion matrix<br/>cm = confusion_matrix(y_test, y_pred)<br/><br/># Print the accuracy and confusion matrix<br/>plt.figure(figsize=(10,7))<br/>sns.heatmap(cm, annot=True)<br/>plt.xlabel('Predicted')<br/>plt.ylabel('Truth')<br/>plt.title('Accuracy: ' + str(accuracy))<br/>plt.show()<br/><br/>",
+        output: "/img/ml/SVMOutput.png",
+      },
+      {
+        title: "Applications of Support Vector Machines",
+        content: [
+          {
+            title: "Image Classification",
+            content:
+              "SVMs are widely used in image classification tasks, such as identifying objects in images or recognizing handwritten digits. By transforming image data into feature vectors, SVMs can learn to classify different objects or patterns.",
+            icon: (
+              <FaImage style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Text Classification",
+            content:
+              "SVMs are used in text classification tasks, such as sentiment analysis, spam detection, and topic categorization. By converting text data into numerical features, SVMs can learn to classify text documents into different categories.",
+            icon: (
+              <FaFileAlt
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Bioinformatics",
+            content:
+              "SVMs are applied in bioinformatics for tasks like protein structure prediction, gene expression analysis, and disease classification. By analyzing biological data, SVMs can help researchers make predictions and identify patterns in complex biological systems.",
+            icon: (
+              <FaDna style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Financial Forecasting",
+            content:
+              "SVMs are used in financial forecasting tasks, such as stock price prediction, risk assessment, and credit scoring. By analyzing historical financial data, SVMs can help investors make informed decisions and predict future market trends.",
+            icon: (
+              <FaChartLine
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Medical Diagnosis",
+            content:
+              "SVMs are employed in medical diagnosis tasks, such as disease detection, patient outcome prediction, and medical image analysis. By analyzing patient data and medical images, SVMs can assist healthcare professionals in making accurate diagnoses and treatment decisions.",
+            icon: (
+              <GiHealthNormal
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Social Network Analysis",
+            content:
+              "SVMs are used in social network analysis tasks, such as link prediction, community detection, and influence analysis. By analyzing social network data, SVMs can help researchers understand social interactions and behavior patterns.",
+            icon: (
+              <FaUsers style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
             ),
           },
         ],
