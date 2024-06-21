@@ -8,6 +8,7 @@ import {
   FaFileAlt,
   FaDna,
   FaChartLine,
+  FaEnvelopeOpenText,
 } from "react-icons/fa";
 import { TbCurrencyDollarOff, TbTargetArrow } from "react-icons/tb";
 import { PiListMagnifyingGlass, PiPersonArmsSpreadFill } from "react-icons/pi";
@@ -567,6 +568,10 @@ const Data = [
           {
             title: "Learn about Support Vector Machines",
             href: "/machine-learning/support-vector-machines",
+          },
+          {
+            title: "Learn about Naive Bayes",
+            href: "/machine-learning/naive-bayes",
           },
         ],
       },
@@ -1423,6 +1428,140 @@ const Data = [
               "SVMs are used in social network analysis tasks, such as link prediction, community detection, and influence analysis. By analyzing social network data, SVMs can help researchers understand social interactions and behavior patterns.",
             icon: (
               <FaUsers style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+        ],
+      },
+    ],
+    "naive-bayes": [
+      {
+        title: "Naive Bayes",
+        content: "",
+      },
+      {
+        title: "What is Naive Bayes?",
+        content:
+          "Naive Bayes is a simple and powerful classification algorithm based on Bayes' Theorem. It's called 'naive' because it makes the assumption that the features in the data are independent of each other, which may not always be true. Despite this simplifying assumption, Naive Bayes is effective in many real-world applications, especially in text classification and spam filtering. It's computationally efficient and easy to implement, making it a popular choice for many machine learning tasks.",
+        image: "/img/ml/nb1.webp",
+      },
+      {
+        title: "Bayes' Theorem",
+        content:
+          "Bayes' Theorem is a fundamental concept in probability theory that describes the probability of an event based on prior knowledge of conditions that might be related to the event. It's expressed as: P(A|B) = P(B|A) * P(A) / P(B) where: P(A|B) is the probability of event A given event B, P(B|A) is the probability of event B given event A, P(A) is the prior probability of event A, and P(B) is the prior probability of event B.",
+        image: <img src="/img/ml/nb2.png" style={{ maxWidth: "400px" }}></img>,
+      },
+      {
+        title: "How does Naive Bayes work?",
+        content: [
+          {
+            title: "Step 1: Data Preparation",
+            content:
+              "The Naive Bayes algorithm starts by preparing the data for training. This involves selecting the features (independent variables) and the target variable (dependent variable) for classification.",
+          },
+          {
+            title: "Step 2: Training the Model",
+            content:
+              "The algorithm calculates the prior probabilities and conditional probabilities of the features given the class labels from the training data. These probabilities are used to make predictions on new data points.",
+          },
+          {
+            title: "Step 3: Making Predictions",
+            content:
+              "Once the model is trained, it can make predictions on new data points by calculating the posterior probability of each class given the features. The class with the highest posterior probability is assigned as the predicted class label.",
+          },
+        ],
+      },
+
+      {
+        title: "Types of Naive Bayes",
+        content: [
+          {
+            title: "Gaussian Naive Bayes",
+            content:
+              "Assumes that the features follow a normal distribution. It's suitable for continuous features and works well for data that is normally distributed.",
+            icon: (
+              <img src="/img/ml/nb3.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+          {
+            title: "Multinomial Naive Bayes",
+            content:
+              "Used for text classification tasks where the features represent word counts or frequencies. It's suitable for discrete features and works well with text data.",
+            icon: (
+              <img src="/img/ml/nb4.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+          {
+            title: "Bernoulli Naive Bayes",
+            content:
+              "Assumes that the features are binary (0 or 1). It's suitable for binary feature data and works well for text classification tasks with binary features.",
+            icon: (
+              <img src="/img/ml/nb5.png" style={{ maxWidth: "300px" }}></img>
+            ),
+          },
+        ],
+      },
+      {
+        title: "Sample Code",
+        content:
+          "import pandas as pd<br/>from sklearn.feature_extraction.text import CountVectorizer<br/>from sklearn.naive_bayes import MultinomialNB<br/>from sklearn.metrics import confusion_matrix<br/>import matplotlib.pyplot as plt<br/>from sklearn.pipeline import Pipeline<br/>import seaborn as sns<br/>from sklearn.model_selection import train_test_split<br/><br/># Read the dataset<br/>df = pd.read_csv('dataset/spam.csv')<br/><br/># Split the dataset into training and testing data<br/>X_train, X_test, y_train, y_test = train_test_split(df['text'], df['label'], test_size=0.2)<br/><br/># Create a pipeline<br/>clf = Pipeline([<br/>    ('vectorizer', CountVectorizer()),<br/>    ('model', MultinomialNB())<br/>])<br/><br/># Train the model<br/>clf.fit(X_train, y_train)<br/><br/># Evaluate the model<br/>score = clf.score(X_test, y_test)<br/><br/># Plot the confusion matrix<br/>cm = confusion_matrix(y_test, clf.predict(X_test))<br/>plt.figure(figsize=(10, 7))<br/>sns.heatmap(cm, annot=True, fmt='d')<br/>plt.xlabel('Predicted')<br/>plt.ylabel('Actual')<br/>plt.title(f'Accuracy: {score:.2f}')<br/>plt.show()<br/>",
+        output: "/img/ml/nbOutput.png",
+      },
+
+      {
+        title: "Applications of Naive Bayes",
+        content: [
+          {
+            title: "Spam Filtering",
+            content:
+              "Naive Bayes is commonly used in spam filtering to classify emails as spam or non-spam based on the content and features of the email. By analyzing word frequencies and other text features, Naive Bayes can accurately identify spam emails and prevent them from reaching the inbox.",
+            icon: (
+              <FaEnvelopeOpenText
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Text Classification",
+            content:
+              "Naive Bayes is widely used in text classification tasks, such as sentiment analysis, topic categorization, and language detection. By analyzing word frequencies and other text features, Naive Bayes can classify text documents into different categories or labels.",
+            icon: (
+              <FaFileAlt
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Recommendation Systems",
+            content:
+              "Naive Bayes can be used in recommendation systems to suggest products, movies, or services to users based on their preferences and past interactions. By analyzing user behavior and item features, Naive Bayes can recommend relevant items to users.",
+            icon: (
+              <MdApps style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Medical Diagnosis",
+            content:
+              "Naive Bayes is applied in medical diagnosis tasks, such as disease prediction, patient outcome analysis, and medical image classification. By analyzing patient data and medical images, Naive Bayes can help healthcare professionals make accurate diagnoses and treatment decisions.",
+            icon: (
+              <GiHealthNormal
+                style={{ fontSize: "80px", color: "rgb(225,150,83)" }}
+              />
+            ),
+          },
+          {
+            title: "Customer Segmentation",
+            content:
+              "Naive Bayes can segment customers into distinct groups based on their demographics, purchase history, and behavior. By analyzing customer data, Naive Bayes can help companies tailor marketing campaigns and product recommendations to specific customer segments.",
+            icon: (
+              <FaUsers style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
+            ),
+          },
+          {
+            title: "Face Recognition",
+            content:
+              "Naive Bayes is used in face recognition systems to classify images of faces into different categories or identities. By analyzing facial features and patterns, Naive Bayes can help identify individuals in images or videos.",
+            icon: (
+              <FaUser style={{ fontSize: "80px", color: "rgb(225,150,83)" }} />
             ),
           },
         ],

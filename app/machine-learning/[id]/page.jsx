@@ -8,11 +8,25 @@ import StepsInfo from "@/components/ourServices/stepsInfo";
 import ColumnInfo2 from "@/components/about/ColumnInfo2";
 import ImageDesc from "@/components/ourServices/ImageDesc";
 import CodeBlock from "@/components/machine-learning/codeBlock";
+import { Col } from "reactstrap";
 export default function LinearRegression({ params }) {
   const data = Data[0][params.id];
   const name = params.id;
   const n = data.length;
 
+  if (name === "naive-bayes") {
+    return (
+      <>
+        <ServiceTitle data={data[0]} />
+        <ImageDesc3 data={data[1]} />
+        <ImageDesc4 data={data[2]} />
+        <StepsInfo data={data[3]} />
+        <ColumnInfo data={data[4]} />
+        <CodeBlock data={data[n - 2]} />
+        <ColumnInfo2 data={data[n - 1]} />
+      </>
+    );
+  }
   if (name == "support-vector-machines") {
     return (
       <>
